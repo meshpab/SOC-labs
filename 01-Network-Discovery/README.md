@@ -1,9 +1,70 @@
-# Network Discovery Lab
+# Lab 01 - Network Discovery
 
 ## Objective
 
-Learn how to identify devices on a network.
+Perform host discovery on the VMware Host-Only network to identify active devices and verify their IP addresses using Nmap/Zenmap 
 
-## Status
+## Environment
 
-Not started.
+- VMware Workstation
+- Kali Linux
+- Ubuntu Server
+- Windows 10
+
+## Network Configuration
+
+- Network Type: Host-Only
+- Subnet: 192.168.56.0/24
+
+## Commands Used
+
+### Kali Linux
+
+```bash
+ip addr
+nmap -sn 192.168.56.0/24
+```
+ip addr/ ip a -to discover ip address and subnet iof KALI linux
+nmap -sn 192.168.56.0/24 - nmap command to discover active devices in the Host-Only network
+### Windows
+
+```cmd
+ipconfig
+```
+ipconfig - to find the ip and subnet of the windows machine
+
+### Ubuntu
+
+```bash
+ip addr
+```
+
+ip addr/ ip a -to discover ip address and subnet of the Ubuntu 
+## Findings
+
+| Host                | IP Address        | Description 
+| VMware Host Adapter | 192.168.56.1      | Host-Only virtual adapter on the host machine 
+| Windows 10          | 192.168.56.11     | Virtual Machine 
+| Ubuntu              | 192.168.56.13     | Virtual Machine 
+| Kali Linux          | 192.168.56.129    | Virtual Machine 
+| VMware DHCP Service | 192.168.56.254    | Provides IP addresses to the Host-Only network 
+
+## Analysis
+
+The scan discovered five active hosts.
+
+Three of the hosts were the virtual machines running in VMware. The remaining two IP addresses belonged to VMware networking services, showing that host discovery can identify both end devices and supporting network infrastructure.
+
+## Evidence
+
+Add screenshots of:
+- `ip addr`
+- `nmap -sn`
+- `ipconfig`
+
+## Lessons Learned
+
+- Determined the subnet using `ip addr`.
+- Performed host discovery using Nmap.
+- Verified IP addresses on Windows and Ubuntu.
+- Identified VMware virtual networking components.
