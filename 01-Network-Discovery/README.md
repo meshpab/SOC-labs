@@ -40,14 +40,17 @@ ip addr
 ```
 
 ip addr/ ip a -to discover ip address and subnet of the Ubuntu 
+
 ## Findings
 
-| Host                | IP Address        | Description 
-| VMware Host Adapter | 192.168.56.1      | Host-Only virtual adapter on the host machine 
-| Windows 10          | 192.168.56.11     | Virtual Machine 
-| Ubuntu              | 192.168.56.13     | Virtual Machine 
-| Kali Linux          | 192.168.56.129    | Virtual Machine 
-| VMware DHCP Service | 192.168.56.254    | Provides IP addresses to the Host-Only network 
+| Device              | IP Address     | Notes                    |
+| ------------------- | -------------- | ------------------------ |
+| Windows 10          | 192.168.56.11  | Virtual Machine          |
+| Ubuntu              | 192.168.56.13  | Virtual Machine          |
+| Kali Linux          | 192.168.56.129 | Virtual Machine          |
+| VMware Host Adapter | 192.168.56.1   | VMware Host-Only Adapter |
+| VMware DHCP Service | 192.168.56.254 | VMware DHCP Service      |
+
 
 ## Analysis
 
