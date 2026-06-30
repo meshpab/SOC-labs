@@ -60,14 +60,11 @@ Three of the hosts were the virtual machines running in VMware. The remaining tw
 
 ## Evidence
 
-Add screenshots of:
-- `ip addr`
-- `nmap -sn`
-- `ipconfig`
+screenshots available on screenshot folder
 
 ## Lessons Learned
 
-- Determined the subnet using `ip addr`.
+- Determined the subnet using `ip addr``ip a`.
 - Performed host discovery using Nmap.
 - Verified IP addresses on Windows and Ubuntu.
 - Identified VMware virtual networking components.
