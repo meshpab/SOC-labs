@@ -60,7 +60,23 @@ Three of the hosts were the virtual machines running in VMware. The remaining tw
 
 ## Evidence
 
-screenshots available on screenshot folder
+## Evidence
+
+### Kali IP
+
+![Kali](kali-ip-addr.png)
+
+### Ubuntu IP
+
+![Ubuntu](ubuntu-ip-addr.png)
+
+### Windows IP
+
+![Windows](windows-ipconfig.png)
+
+### Host Discovery
+
+![Nmap](host-discovery.png)
 
 ## Lessons Learned
 
