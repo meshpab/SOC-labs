@@ -1,16 +1,16 @@
-# SOC Analyst Lab Portfolio
+# SOC Labs
 
-Welcome to my SOC Analyst portfolio.
+A collection of hands-on SOC Analyst labs documenting practical cybersecurity investigations.
 
-This repository contains my hands-on cybersecurity labs and investigations.
+## Completed Labs
 
-## Lab Environment
+- [Lab 01 - Network Discovery](01-Network-Discovery/)
 
-- VMware
-- Windows 10
-- Kali Linux
-- Ubuntu
+## Skills Covered
 
-## Labs
-
-Coming soon...
+- Networking
+- Nmap
+- Wireshark
+- Firewalls
+- IDS/IPS
+- SIEM
