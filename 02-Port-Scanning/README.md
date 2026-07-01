@@ -143,7 +143,7 @@ nmap <target-ip>
 ```
 
 #### Ubuntu
-
+![Default Port Scan](01-default-port-scan.png)
 ![Ubuntu Default Scan](screenshots/ubuntu/01-default-port-scan.png)
 
 **Findings**
