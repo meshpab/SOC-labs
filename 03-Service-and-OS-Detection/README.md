@@ -125,23 +125,85 @@ Expected Outcome:
 
 
 
-## Important Analysis quiz
-1.Which ports were open?
+## Observations & Analysis
 
-2.Which services were detected?
+Windows Service Version Detection (nmap -sV)
 
-3.What versions of the services were identified?
+### Observations
+The Windows host was reachable and responded to Nmap probes.
 
-4.Was the operating system correctly identified?
+Three TCP ports were open: 135 (MSRPC), 139 (NetBIOS-SSN), and 445 (Microsoft-DS).
 
-5.Why is service and OS detection important during reconnaissance?
+Nmap successfully identified Microsoft services running on the target.
+
+The service information indicated that the operating system is Windows.
+
+### Analysis
+
+The detected services are commonly used for Windows networking and file sharing. These services can be useful for system administration but should be secured because they are frequent targets for attackers.
+
+Windows OS Detection (nmap -O)
+
+### Observations
+
+Nmap identified the target as Microsoft Windows 10.
+
+The OS detection accuracy was high.
+
+The estimated network distance was 1 hop, indicating the target was on the same local network.
+
+### Analysis
+
+OS fingerprinting successfully identified the target operating system, providing valuable information for security assessments and vulnerability identification.
+
+Ubuntu Service Version Detection (nmap -sV)
+
+### Observations
+
+The Ubuntu host responded successfully.
+
+Only port 22 (SSH) was open.
+
+Nmap identified OpenSSH 9.6p1 running on Ubuntu.
+
+The service information confirmed the operating system as Linux.
+
+### Analysis
+
+The Ubuntu system exposed only the SSH service, indicating a smaller attack surface compared to the Windows host.
 
 ## Key Takeaways
--Service version detection identifies applications running on open ports.
+Service version detection identifies applications running on open ports.
 
--Operating system detection estimates the target's operating system through TCP/IP fingerprinting.
+OS detection estimates the target operating system using TCP/IP fingerprinting.
 
--Combining these scans provides valuable information for vulnerability assessment and network security analysis.
+Windows exposed more services than Ubuntu in this lab.
+
+Ubuntu presented a smaller attack surface with only SSH exposed.
+
+Firewalls can limit the amount of information revealed during reconnaissance.
+
+Combining service and OS detection provides a better understanding of the target environment.
+
+Ubuntu OS Detection (nmap -O)
+
+### Observations
+
+Nmap identified the target as a Linux-based operating system.
+
+The scan estimated a Linux kernel version.
+
+Network distance was 1 hop, confirming local network connectivity.
+
+### Analysis
+
+OS detection successfully recognized the target as Linux. Although Nmap listed several possible Linux variants, it correctly classified the operating system family.
+
+## Firewall Observation
+
+During the initial scans, the Windows firewall prevented Nmap from accurately identifying services and the operating system. After temporarily disabling the firewall, the scans successfully detected open ports, service versions, and operating system information.
+
+This demonstrates that host-based firewalls can significantly reduce the amount of information exposed during network reconnaissance and help protect systems from unauthorized enumeration.
 
 ## Conclusion
 This lab demonstrated how to use Nmap to identify running services, software versions, and operating systems on Windows and Ubuntu targets. The information collected during this phase helps security analysts understand the target environment, identify potential vulnerabilities, and plan further security assessments.
