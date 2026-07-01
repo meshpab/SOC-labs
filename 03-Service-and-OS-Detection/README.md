@@ -79,6 +79,7 @@ Expected Outcome:
 -Identify application versions
 
 ### Screenshot
+![
 
 ## Task 3 – Operating System Detection
 
