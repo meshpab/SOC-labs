@@ -60,6 +60,8 @@ Expected Outcome:
 
 ## Screenshot
 
+![Windows Service Version](windows-service_version.png)
+
 Ubuntu Target
 
 Run
@@ -79,7 +81,9 @@ Expected Outcome:
 -Identify application versions
 
 ### Screenshot
-![
+
+![Ubuntu Service Version](Ubuntu-service_version.png)
+
 
 ## Task 3 – Operating System Detection
 
@@ -104,6 +108,8 @@ Expected Outcome:
 
 ### Screenshot
 
+![Windows OS Detection](windows-OS-detection.png)
+
 Ubuntu Target
 
 Run:
@@ -124,6 +130,7 @@ Expected Outcome:
 
 ### Screenshot
 
+![Ubuntu OS Detection](Ubuntu_OS-Detection.png)
 
 
 ## Observations & Analysis
