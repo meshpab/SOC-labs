@@ -57,7 +57,7 @@ Command
 nmap -Pn 192.168.56.11
 ```
 
-![Baseline Windows Scan](Baseline-Windows-Scan.png) 
+![Baseline Windows Scan](screenshot/Baseline-Windows-Scan.png) 
 
 ### Observation
 
@@ -74,7 +74,7 @@ nmap -Pn -sV 192.168.56.11
 ```
 
 
-![Windows Service Version](Windows-Service-Version.png)
+![Windows Service Version](screenshot/Windows-Service-Version.png)
 
 ### Observation
 
