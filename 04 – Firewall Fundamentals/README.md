@@ -120,8 +120,18 @@ Enable Windows Defender Firewall and Ubuntu server UFW and perform scanning
 
 ### Windows Defender Firewall
 
-## Evidence
-![Windows-Firewall-enabled](screenshots/windows-Firewall)
+### Evidence
+
+![Windows-Firewall-enabled](screenshots/windows-Firewall.png)
 
 
 
+Ubuntu Server UFW
+
+![Ubuntu-Firewall-enabled](screenshots/ubuntu-Firewall.png)
+
+### Observation
+
+Firewall filtered some ports.
+
+Less information was exposed.
