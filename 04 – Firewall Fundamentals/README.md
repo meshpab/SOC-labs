@@ -57,7 +57,7 @@ Command
 nmap -Pn 192.168.56.11
 ```
 
-![Baseline Windows Scan](screenshot/Baseline-Windows-Scan.png) 
+![Baseline Windows Scan](screenshots/Baseline-Windows-Scan.png) 
 
 ### Observation
 
