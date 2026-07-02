@@ -144,7 +144,7 @@ nmap <target-ip>
 
 
 #### Ubuntu
-![Default Port Scan](01-default-port-scan.Ubuntu.png)
+![Default Port Scan](screenshots/01-default-port-scan.Ubuntu.png)
 
 **Findings**
 
@@ -154,7 +154,7 @@ nmap <target-ip>
 
 #### Windows
 
-![Windows Default Port Scan](01-default-port-scan-windows.png)
+![Windows Default Port Scan](screenshots/01-default-port-scan-windows.png)
 
 **Findings**
 
@@ -171,11 +171,11 @@ nmap -p 22,80,443 <target-ip>
 
 #### Ubuntu
 
-![Ubuntu Specific Port Scan](03-port-range-scan.Ubuntu.png)
+![Ubuntu Specific Port Scan](screenshots/02-specific-ports-scan.Ubuntu.png)
 
 #### Windows
 
-![Windows Specific Ports](03-port-range-windows.png)
+![Windows Specific Ports](02-specific-ports-windows.png)
 
 ---
 ### 3. Port Range Scan
@@ -186,11 +186,11 @@ nmap -p 1-1000 <target-ip>
 
 #### Ubuntu
 
-![Ubuntu Port Range](03-port-range-scan.Ubuntu.png)
+![Ubuntu Port Range](screenshots/03-port-range-scan.Ubuntu.png)
 
 #### Windows
 
-![Windows Port Range](03-port-range-windows.png)
+![Windows Port Range](screenshots/03-port-range-windows.png)
 
 ---
 ### 4. All Ports Scan
@@ -201,11 +201,11 @@ nmap -p- <target-ip>
 
 #### Ubuntu
 
-![Ubuntu All Ports](04-all-ports-scan.Ubuntu.png)
+![Ubuntu All Ports](screenshots/04-all-ports-scan.Ubuntu.png)
 
 #### Windows
 
-![Windows All Ports](04-all-ports-windows.png)
+![Windows All Ports](screenshots/04-all-ports-windows.png)
 
 ---
 ### 5. SYN Scan
@@ -216,11 +216,11 @@ sudo nmap -sS <target-ip>
 
 #### Ubuntu
 
-![Ubuntu SYN Scan](05-syn-scan.Ubuntu.png)
+![Ubuntu SYN Scan](screenshots/05-syn-scan.Ubuntu.png)
 
 #### Windows
 
-![Windows SYN Scan](05-syn-scan-windows.png)
+![Windows SYN Scan](screenshots/05-syn-scan-windows.png)
 
 ---
 ## Analysis
