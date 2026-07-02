@@ -118,11 +118,9 @@ Answer these questions:
 
 Which ports are open?
 
-Which ports are closed?
-
 Is the host reachable?
 
-![Baseline-Windows-Scan](Baseline-Windows-Scan.png) 
+![Baseline Windows Scan](Baseline-Windows-Scan.png) 
 
 ### 3.2 Service Version Detection (Windows)
 
@@ -136,5 +134,21 @@ nmap -Pn -sV 192.168.56.11
 
 -sV - Attempts to identify the service and version running on each open port.
 
+#### Observe
 
+What services are running?
 
+Which ports are providing those services?
+
+![Windows Service Version](Windows-Service-Version.png)
+
+### 3.3 Scan Ubuntu Server
+
+Now scan your Ubuntu Server from Kali Linux:
+
+nmap -Pn <Ubuntu-IP>
+
+Example:
+```bash
+nmap -Pn 192.168.56.13
+```
