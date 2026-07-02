@@ -68,7 +68,7 @@ sudo nmap -O 192.168.56.11
 ![Windows OS Detection](screenshots/windows-OS-detection.png)
 
 
-Observation
+### Observation
 
 Target identified as Microsoft Windows 10.
 
