@@ -114,8 +114,14 @@ Baseline Assessment
 
 Both Windows 10 and Ubuntu Server were successfully discovered from Kali Linux. Baseline scans identified reachable hosts, open ports, and running services prior to implementing firewall rules. These results provide a reference point for evaluating the impact of firewall configurations in subsequent tests.
 
-Outbound Rules
+## Firewall Configuration
 
-Connection Security Rules
+Enable Windows Defender Firewall and Ubuntu server UFW and perform scanning
 
-Monitoring
+### Windows Defender Firewall
+
+## Evidence
+![Windows-Firewall-enabled](screenshots/windows-Firewall)
+
+
+
