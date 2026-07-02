@@ -152,7 +152,20 @@ Now scan your Ubuntu Server from Kali Linux:
 nmap -Pn <Ubuntu-IP>
 
 Example:
+
 ```bash
 nmap -Pn 192.168.56.11
 ```
 ![Baseline Ubuntu Scan](Baseline-Ubuntu-Scan.png)
+
+### 3.4 Service Version Detection (Ubuntu)
+
+nmap -Pn -sV <Ubuntu-IP>
+
+Example:
+
+```bash
+nmap -Pn -sV 192.168.56.13
+```
+
+![Ubuntu Service Version](Ubuntu-Service-Version.png)
