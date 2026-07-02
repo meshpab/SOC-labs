@@ -79,7 +79,7 @@ Most ports within the scanned range remained filtered, limiting service enumerat
 
 ### Ubuntu Server
 
-![Ubuntu port range](screenshots/03port-range-scanUbuntu)
+![Ubuntu port range](screenshots/03-port-range-scan.Ubuntu)
 Observation
 
 The scan confirmed SSH (22/TCP) as the primary exposed service within the first 1,000 ports.
@@ -96,7 +96,7 @@ The full scan identified only a limited number of accessible ports, reflecting t
 
 ### Ubuntu Server
 
-![Ubuntu All Ports](screenshots/04-all-ports.Ubuntu.png)
+![Ubuntu All Ports](screenshots/04-all-ports-scan.Ubuntu.png)
 
 Additional services were discovered during the full TCP scan, including ports 1514, 1515, and 5601, which were not identified during the default scan.
 
