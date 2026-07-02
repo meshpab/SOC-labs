@@ -30,9 +30,13 @@ nmap -Pn --script banner 192.168.56.13
 
 nmap -Pn --script ssh-hostkey 192.168.56.13
 
+### Ubuntu Server
+
 Firewall blocks open ports therefore we intentionally open port 22 for observation
 
+### banner grabbing
 
 ![Ubuntu-banner-retrieval](screenshots/ubuntu-banner-retrieval.png)
 
+### ssh-hostkey retrieval
 ![Ubuntu-ssh-hostkey](screenshots/ubuntu-ssh-hostkey.png)
