@@ -1,10 +1,10 @@
 ## Lab 04 - Firewall Fundamentals
 
-## Objective
+### Objective
 
-Learn the fundamentals of host-based firewalls by configuring firewall rules on Windows 10 and Ubuntu Server, then observe how those rules affect network reconnaissance using Nmap from Kali Linux.
+Evaluate how host-based firewalls affect network reconnaissance by performing baseline scans and comparing scan results before and after firewall configuration.
 
-## Lab Environment
+### Lab Environment
 
 | Machine  | Operating System                     | Role                      |
 | -------- | ------------------------------------ | ------------------------- |
@@ -14,155 +14,91 @@ Learn the fundamentals of host-based firewalls by configuring firewall rules on 
 | Tools    | Nmap, Windows Defender Firewall, UFW | Security Tools            |
 
 
-## STEP 1 — Identify IP Addresses
+### Network Configuration
 
 Before scanning, determine the IP address of each machine.
 
 Kali Linux:
 
-```Bash
-ip addr
-```
-or
+| Machine       | IP Address    |
+| ------------- | ------------- |
+| Kali Linux    | 192.168.56.15 |
+| Windows 10    | 192.168.56.11 |
+| Ubuntu Server | 192.168.56.13 |
 
 
-```Bash
-ip a
-```
-Kali IP: 192.168.56.15
-
-Windows 10:
-
-Open Cmd:
-
-```
-ipconfig
+### Connectivity Verification
+```bash
+ping 192.168.56.11
+ping 192.168.56.13
 ```
 
-Windows IP: 192.168.56.11
 
-Ubuntu server:
+### Results
 
-```Bash
-ip addr
-```
-
-or
-
-```Bash
-ip a
-```
-Ubuntu IP: 192.168.56.13
-
-## STEP 2 — Verify Connectivity
-
-From Kali Linux:
-
-```
-ping <Windows-IP>
-```
-Then,
-
-```
-ping <Ubuntu-IP>
-```
+| Target        | Status    | Packet Loss |
+| ------------- | --------- | ----------- |
+| Windows 10    | Reachable | 0%          |
+| Ubuntu Server | Reachable | 0%          |
 
 ### Observation
 
-Are replies received?
-
-Any packet loss?
+Both target machines were reachable from Kali Linux, confirming successful network connectivity before reconnaissance.
 
 
-![Host up](screenshots/Host-up.png)
+## Baseline Nmap Scans
 
 
-Host up and active
+### Windows machine
 
-ping 192.168.56.11 (windows machine) 5 packets transmitted, 5 packets received, 0% packet loss
-
-ping 192.168.56.11 (Ubuntu server machine) 5 packets transmitted, 5 packets received, 0% packet loss
-
-Host down
- 
-![Host down](screenshots/Host-down.png)
-
-ping 192.168.56.11 (windows machine) 6 packets transmitted, 0 packets received, 100% packet loss
-
-ping 192.168.56.13 (Ubuntu server  machine) 8 packets transmitted, 0 packets received, 100% packet loss
-
-### STEP 3 – Baseline Nmap Scans
-
-### Objective
-
-Perform reconnaissance from Kali Linux against both target machines before making any firewall changes. These results will serve as the baseline for comparison later in the lab.
-
-### 3.1 Scan Windows machine
-
-From Kali Linux, run:
-
-nmap -Pn <Windows-IP>
-
-Example:
+Command
 
 ```bash
 nmap -Pn 192.168.56.11
 ```
-nmap - Starts the network scan.
-
--Pn - Treats the host as online and skips the ping (host discovery) phase. This is useful because some firewalls block ping requests.
-
-Record the Results
-
-Answer these questions:
-
-Which ports are open?
-
-Which ports are closed?
-
-Is the host reachable?
 
 ![Baseline Windows Scan](Baseline-Windows-Scan.png) 
 
-### 3.2 Service Version Detection (Windows)
+### Observation
 
-Run:
+Host was reachable.
 
-nmap -Pn -sV <Windows-IP>
+Open ports were identified before firewall modifications.
 
-Example:
+### Windows Service Detection
+
+Command
+
 ```bash
 nmap -Pn -sV 192.168.56.11
 ```
 
--sV - Attempts to identify the service and version running on each open port.
-
-#### Observe
-
-What services are running?
-
-Which ports are providing those services?
 
 ![Windows Service Version](Windows-Service-Version.png)
 
-### 3.3 Scan Ubuntu Server
+### Observation
 
-Now scan your Ubuntu Server from Kali Linux:
+Service version detection successfully identified services running on exposed ports.
 
-nmap -Pn <Ubuntu-IP>
+### Scan Ubuntu Server
 
-Example:
+ Ubuntu Server 
+
+Command
 
 ```bash
-nmap -Pn 192.168.56.11
+nmap -Pn 192.168.56.13
 ```
+
 ![Baseline Ubuntu Scan](screenshots/Baseline-Ubuntu-Scan.png)
 
-### 3.4 Service Version Detection (Ubuntu)
+### Observation
 
-nmap -Pn -sV <Ubuntu-IP>
+Ubuntu Server responded to the scan and exposed active network services.
 
-Example:
+### Ubuntu Service Detection
+
+Command
 
 ```bash
 nmap -Pn -sV 192.168.56.13
@@ -172,5 +108,14 @@ nmap -Pn -sV 192.168.56.13
 
 ## Observation
 
-Before configuring any firewall rules, Kali Linux successfully discovered both target systems. The scans identified open ports and running services on Windows 10 and Ubuntu Server. These baseline results will be used later to compare how firewall configurations affect host visibility and service accessibility.
+Service version detection identified the active services running on Ubuntu Server.
 
+Baseline Assessment
+
+Both Windows 10 and Ubuntu Server were successfully discovered from Kali Linux. Baseline scans identified reachable hosts, open ports, and running services prior to implementing firewall rules. These results provide a reference point for evaluating the impact of firewall configurations in subsequent tests.
+
+Outbound Rules
+
+Connection Security Rules
+
+Monitoring
