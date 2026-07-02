@@ -74,7 +74,7 @@ nmap -Pn -sV 192.168.56.11
 ```
 
 
-![Windows Service Version](screenshot/Windows-Service-Version.png)
+![Windows Service Version](screenshots/Windows-Service-Version.png)
 
 ### Observation
 
