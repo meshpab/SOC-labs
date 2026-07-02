@@ -118,6 +118,8 @@ Answer these questions:
 
 Which ports are open?
 
+Which ports are closed?
+
 Is the host reachable?
 
 ![Baseline Windows Scan](Baseline-Windows-Scan.png) 
@@ -129,8 +131,9 @@ Run:
 nmap -Pn -sV <Windows-IP>
 
 Example:
-
+```bash
 nmap -Pn -sV 192.168.56.11
+```
 
 -sV - Attempts to identify the service and version running on each open port.
 
@@ -150,5 +153,6 @@ nmap -Pn <Ubuntu-IP>
 
 Example:
 ```bash
-nmap -Pn 192.168.56.13
+nmap -Pn 192.168.56.11
 ```
+![Baseline Ubuntu Scan](Baseline-Ubuntu-Scan.png)
