@@ -35,300 +35,89 @@ VMware Workstation
 | SYN Scan         | `sudo nmap -sS <IP>`        | Perform a half-open (stealth) scan   |
 | Save Output      | `nmap -oN results.txt <IP>` | Save scan results to a text file     |
 
-## Results
-
+### Default Port Scan
+ 
 ### Windows 10
-
-### Default Scan
-
-Command
-
-```bash
-nmap 192.168.56.11
-```
-### Evidence
 
 ![Windows Default Port Scan](screenshots/01-default-port-scan-windows.png)
 
-### Observation
+Observation
 
-Host was reachable. 
+The host was reachable, but most scanned ports appeared filtered, indicating that Windows Defender Firewall was restricting scan responses.
 
-Several ports appeared filtered, indicating firewall restrictions.
-
-### Specific port scan
-
-command 
-```bash
-nmap -p 22,80,443 192.168.56.11
-```
-nmap
-![Windows Specific Ports](screenshots/02-specific-ports-windows.png)
-
-### Observation
-
-The scan identified ports 22, 80, and 443 as filtered. This indicates that inbound traffic to these ports was being filtered by the host firewall, reducing the system's exposure to network reconnaissance.
-
-port range scan 
-Command
-
-```bash
-nmap -p 1-1000 <target-ip>
-```
-
-### Evidence
-
-![Windows Port Range](screenshots/03-port-range-windows.png)
-
-### SYN Scan
-
-Command
-
-```bash
-sudo nmap -sS 192.168.56.11
-```
-### Evidence
-
-![Windows SYN Scan](screenshots/05-syn-scan-windows.png)
-
-### Observation
-
-Port 7680/TCP was identified as open.
-SYN scanning revealed additional information compared to the default scan.
-
-## Ubuntu Server
-
-### Default Scan
-
- Command
-
-```bash
-nmap 192.168.56.13
-```
-
-### Evidence
+### Ubuntu Server
 
 ![Default Port Scan](screenshots/01-default-port-scan.Ubuntu.png)
 
-### Observation
+Observation
 
-Port 22/TCP (SSH) was open.
+The default scan identified TCP port 22 (SSH) as open, while the remaining common ports were closed.
 
-Remaining common ports were closed.
+### Specific Ports Scan (22, 80, 443)
 
-### Full Port Scan
+### Windows 10
 
-Command
+![windows Specific Port Scan](screenshots/02-specific-ports-windows.png)
 
-```bash
-nmap -p- 192.168.56.13
-```
-### Evidence
+Ports 22, 80, and 443 were reported as filtered, suggesting that firewall rules prevented Nmap from determining their state.
 
-![Ubuntu All Ports](screenshots/04-all-ports-scan.Ubuntu.png)
-
-### Observation
-
-The full TCP scan identified additional services including:
-
-
-
-22	SSH
-
-1514	Wazuh Agent Communication
-
-1515	Wazuh Enrollment
-
-5601	Kibana Dashboard
-
-| Feature      | Windows 10                      | Ubuntu Server                  |
-| ------------ | ------------------------------- | ------------------------------ |
-| Default Scan | Multiple filtered ports         | SSH detected                   |
-| Full Scan    | Limited due to firewall         | Additional services discovered |
-| SYN Scan     | Revealed additional information | Confirmed exposed services     |
-
-
-
-
-
-
-### 3. Scan a Range of Ports
-
-```bash
-nmap -p 1-1000 <target-ip>
-```
-
-**Explanation**
-
-- `-p` = **Ports**
-- `1-1000` = Scans ports 1 through 1000.
-
----
-
-### 4. Scan All TCP Ports
-
-```bash
-nmap -p- <target-ip>
-```
-
-**Explanation**
-
-- `-p-` = Scans **all TCP ports (1–65535)**.
-
----
-
-### 5. TCP Connect Scan
-
-```bash
-nmap -sT <target-ip>
-```
-
-**Explanation**
-
-- `-sT` = **TCP Connect Scan**
-- Performs a full TCP three-way handshake.
-- Does **not** require root/administrator privileges.
-
----
-
-### 6. SYN Scan
-
-```bash
-sudo nmap -sS <target-ip>
-```
-
-**Explanation**
-
-- `sudo` = Runs the command with administrator (root) privileges.
-- `-sS` = **SYN Scan** (also called a stealth or half-open scan).
-- Faster than a TCP Connect scan and commonly used in security assessments.
-
----
-
-### 7. Save Scan Results
-
-```bash
-nmap -oN port-scan-results.txt <target-ip>
-```
-
-**Explanation**
-
-- `-oN` = **Output Normal**. Saves the scan output in a human-readable text file.
-- `port-scan-results.txt` = Name of the output file.
-
-## Results
-### 1. Default Port Scan
-
-**Command**
-
-```bash
-nmap <target-ip>
-```
-
-
-#### Ubuntu
-
-
-**Findings**
-
-- Host was up.
-- Port 22 (SSH) was open.
-- Remaining common ports were closed.
-
-#### Windows
-
-
-
-**Findings**
-
-- Host was reachable.
-- Most ports were filtered.
-- Firewall appeared to block scan responses.
-
----
-### 2. Specific Ports Scan
-
-```bash
-nmap -p 22,80,443 <target-ip>
-```
-
-#### Ubuntu
+### Ubuntu Server
 
 ![Ubuntu Specific Port Scan](screenshots/02-specific-ports-scan.Ubuntu.png)
 
-#### Windows
+Port 22 (SSH) was open, while ports 80 (HTTP) and 443 (HTTPS) were closed, indicating that no web services were running.
 
+Port Range Scan (1–1000)
 
----
-### 3. Port Range Scan
+### Windows 10
 
-```bash
-nmap -p 1-1000 <target-ip>
-```
+![Windows Port Range](screenshots/03-port-range-windows.png)
 
-#### Ubuntu
+### Observation
 
-![Ubuntu Port Range](screenshots/03-port-range-scan.Ubuntu.png)
+Most ports within the scanned range remained filtered, limiting service enumeration.
 
-#### Windows
+### Ubuntu Server
 
+![Ubuntu port range](screenshots/03port-range-scanUbuntu)
+Observation
 
+The scan confirmed SSH (22/TCP) as the primary exposed service within the first 1,000 ports.
 
----
-### 4. All Ports Scan
-
-```bash
-nmap -p- <target-ip>
-```
-
-#### Ubuntu
-
-
-
-#### Windows
+### Full Port Scan
+   
+### Windows 10
 
 ![Windows All Ports](screenshots/04-all-ports-windows.png)
 
----
-### 5. SYN Scan
+Observation
 
-```bash
-sudo nmap -sS <target-ip>
-```
+The full scan identified only a limited number of accessible ports, reflecting the effect of host-based firewall filtering.
 
-#### Ubuntu
+### Ubuntu Server
 
+![Ubuntu All Ports](screenshots/04-all-ports.Ubuntu.png)
 
+Additional services were discovered during the full TCP scan, including ports 1514, 1515, and 5601, which were not identified during the default scan.
 
-#### Windows
+### SYN Scan
 
-
-
----
-## Analysis
+### Windows 10
 
 
-The port scans demonstrated how Nmap identifies network services exposed on different operating systems. The Ubuntu machine consistently showed port 22 (SSH) as open, indicating that remote access via SSH was enabled. When all TCP ports were scanned, additional open ports (1514, 1515, and 5601) were discovered, showing that a full port scan can reveal services that are not identified during the default scan.
+![Windows SYN Scan](screenshots/05-syn-scan-windows.png)
 
-The Windows machine produced different results, with many ports appearing as filtered during the default scan. This suggests that firewall rules were restricting responses to Nmap probes. However, the SYN scan detected port 7680 as open, demonstrating that different scanning techniques can produce different results depending on the target's configuration.
+Observation
+The SYN scan detected port 7680/TCP as open, demonstrating that different scan techniques can reveal additional information.
 
-Overall, the lab highlighted the importance of selecting appropriate scan types and interpreting scan results based on the operating system and network security controls.
+### Ubuntu Server
+
+![Ubuntu SYN Scan](screenshots/05-syn-scan.Ubuntu.png)
+
+The SYN scan confirmed the previously identified open ports while providing a faster and less intrusive method of reconnaissance.
 
 
-## Key Takeaways
 
 
-- Learned how to perform port scanning using Nmap.
-- Understood the purpose of the default, specific port, port range, full port, and SYN scans.
-- Learned the difference between open, closed, and filtered ports.
-- Observed that Ubuntu and Windows respond differently to port scans.
-- Discovered that scanning all ports may reveal additional services not detected by a default scan.
-- Improved understanding of how firewall configurations affect scan results.
 
-## Conclusion
 
-This lab introduced the fundamentals of port scanning using Nmap in a controlled environment. By scanning both Ubuntu and Windows systems, I gained practical experience in identifying open ports, interpreting scan results, and comparing how different operating systems respond to network reconnaissance. The knowledge gained from this lab provides a solid foundation for the next stage of reconnaissance, which involves identifying the services and operating systems running on the discovered open ports.
-
-## Next Steps
-
-The next lab will focus on Service Version Detection and Operating System Detection using Nmap to identify the software versions and operating systems running on the discovered open ports.
