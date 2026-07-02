@@ -74,7 +74,7 @@ Are replies received?
 Any packet loss?
 
 
-![Host up](Host-up.png)
+![Host up](screenshots/Host-up.png)
 
 
 Host up and active
@@ -85,7 +85,7 @@ ping 192.168.56.11 (Ubuntu server machine) 5 packets transmitted, 5 packets rece
 
 Host down
  
-![Host down](Host-down.png)
+![Host down](screenshots/Host-down.png)
 
 ping 192.168.56.11 (windows machine) 6 packets transmitted, 0 packets received, 100% packet loss
 
@@ -156,7 +156,7 @@ Example:
 ```bash
 nmap -Pn 192.168.56.11
 ```
-![Baseline Ubuntu Scan](Baseline-Ubuntu-Scan.png)
+![Baseline Ubuntu Scan](screenshots/Baseline-Ubuntu-Scan.png)
 
 ### 3.4 Service Version Detection (Ubuntu)
 
@@ -168,7 +168,7 @@ Example:
 nmap -Pn -sV 192.168.56.13
 ```
 
-![Ubuntu Service Version](Ubuntu-Service-Version.png)
+![Ubuntu Service Version](screenshots/Ubuntu-Service-Version.png)
 
 ## Observation
 
