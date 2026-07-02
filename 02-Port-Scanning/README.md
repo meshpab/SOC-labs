@@ -79,7 +79,7 @@ Most ports within the scanned range remained filtered, limiting service enumerat
 
 ### Ubuntu Server
 
-![Ubuntu port range](screenshots/03-port-range-scan.Ubuntu)
+![Ubuntu port range](screenshots/03-port-range-scan.Ubuntu.png)
 Observation
 
 The scan confirmed SSH (22/TCP) as the primary exposed service within the first 1,000 ports.
@@ -116,8 +116,22 @@ The SYN scan detected port 7680/TCP as open, demonstrating that different scan t
 
 The SYN scan confirmed the previously identified open ports while providing a faster and less intrusive method of reconnaissance.
 
+## Analysis 
 
+The port scans demonstrated how different Nmap scan techniques reveal varying levels of information about a target system. Ubuntu Server consistently exposed SSH (port 22) and additional services during the full TCP scan, while Windows 10 returned several filtered ports due to Windows Defender Firewall. The full port scan identified services that were not visible during the default scan, highlighting the importance of selecting an appropriate scanning technique during reconnaissance.
 
+## Key Takeaways 
 
+Performed multiple TCP port scanning techniques using Nmap.
 
+Compared scan results between Windows 10 and Ubuntu Server.
 
+Identified the difference between open, closed, and filtered ports.
+
+Observed how firewall configurations affect scan results.
+
+Verified that a full TCP scan can reveal additional services not found in a default scan.
+
+## Conclusion 
+
+This lab provided practical experience with Nmap port scanning techniques in a controlled virtual environment. By comparing Windows 10 and Ubuntu Server, I learned how different operating systems and firewall configurations influence scan results. The knowledge gained from this lab establishes a strong foundation for the next stage of reconnaissance, which focuses on service version and operating system detection.
