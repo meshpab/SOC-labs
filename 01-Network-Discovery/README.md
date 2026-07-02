@@ -2,85 +2,85 @@
 
 ## Objective
 
-Perform host discovery on the VMware Host-Only network to identify active devices and verify their IP addresses using Nmap/Zenmap 
+Perform host discovery on a VMware Host-Only network to identify active devices and verify their IP addresses using Nmap.
 
 ## Environment
 
-- VMware Workstation
-- Kali Linux
-- Ubuntu Server
-- Windows 10
+| Component    | Details             |
+| ------------ | ------------------- |
+| Hypervisor   | VMware Workstation  |
+| Attacker     | Kali Linux          |
+| Target 1     | Windows 10          |
+| Target 2     | Ubuntu Server (CLI) |
+| Network Type | Host-Only           |
+| Subnet       | 192.168.56.0/24     |
 
-## Network Configuration
-
-- Network Type: Host-Only
-- Subnet: 192.168.56.0/24
-
-## Commands Used
+## Commands executed
 
 ### Kali Linux
 
 ```bash
 ip addr
-nmap -sn 192.168.56.0/24
 ```
-ip addr/ ip a -to discover ip address and subnet iof KALI linux
-nmap -sn 192.168.56.0/24 - nmap command to discover active devices in the Host-Only network
-### Windows
+windows 10
 
 ```cmd
 ipconfig
 ```
-ipconfig - to find the ip and subnet of the windows machine
 
-### Ubuntu
+### Ubuntu server
 
 ```bash
 ip addr
 ```
+### Host Discovery
 
-ip addr/ ip a -to discover ip address and subnet of the Ubuntu 
+```bash
+nmap -sn 192.168.56.0/24
+```
 
 ## Findings
 
-| Device              | IP Address     | Notes                    |
-| ------------------- | -------------- | ------------------------ |
-| Windows 10          | 192.168.56.11  | Virtual Machine          |
-| Ubuntu              | 192.168.56.13  | Virtual Machine          |
-| Kali Linux          | 192.168.56.129 | Virtual Machine          |
-| VMware Host Adapter | 192.168.56.1   | VMware Host-Only Adapter |
-| VMware DHCP Service | 192.168.56.254 | VMware DHCP Service      |
+| Device              | IP Address     | Description               |
+| ------------------- | -------------- | ------------------------- |
+| Kali Linux          | 192.168.56.129 | Attacker Machine          |
+| Windows 10          | 192.168.56.11  | Target Host               |
+| Ubuntu Server       | 192.168.56.13  | Linux Server              |
+| VMware Host Adapter | 192.168.56.1   | Host-Only Network Adapter |
+| VMware DHCP Server  | 192.168.56.254 | DHCP Service              |
 
+
+
+## Evidence
+
+
+### Kali Linux network configuration
+
+![Kali](screenshots/kali-ip-addr.png)
+
+### Ubuntu Server network configuration
+
+![Ubuntu](screenshots/ubuntu-ip-addr.png)
+
+### Windows IP configuration
+
+![Windows](screenshots/windows-ipconfig.png)
+
+### Nmap host discovery results
+
+![Nmap](screenshots/host-discovery.png)
 
 ## Analysis
 
-The scan discovered five active hosts.
+The host discovery scan identified five active devices within the 192.168.56.0/24 Host-Only network. Three devices were virtual machines (Kali Linux, Windows 10, and Ubuntu Server), while the remaining two belonged to VMware's networking infrastructure. This demonstrates that Nmap can identify both endpoint systems and supporting network services during the reconnaissance phase.
 
-Three of the hosts were the virtual machines running in VMware. The remaining two IP addresses belonged to VMware networking services, showing that host discovery can identify both end devices and supporting network infrastructure.
+## Key Takeaways
+Successfully identified active hosts within the Host-Only network.
+Verified IP addressing on Kali Linux, Windows 10, and Ubuntu Server.
+Used Nmap to perform ICMP host discovery.
+Recognized VMware networking components as part of the scan results.
+Established a network inventory for subsequent security assessments.
 
-## Evidence
+## Conclusion
 
-## Evidence
-
-### Kali IP
-
-![Kali](kali-ip-addr.png)
-
-### Ubuntu IP
-
-![Ubuntu](ubuntu-ip-addr.png)
-
-### Windows IP
-
-![Windows](windows-ipconfig.png)
-
-### Host Discovery
-
-![Nmap](host-discovery.png)
-
-## Lessons Learned
-
-- Determined the subnet using `ip addr``ip a`.
-- Performed host discovery using Nmap.
-- Verified IP addresses on Windows and Ubuntu.
-- Identified VMware virtual networking components.
+This lab established the baseline network topology by identifying active hosts and their assigned IP addresses. The results provide a foundation for subsequent reconnaissance activities, including port scanning, service enumeration, operating system detection, and firewall analysis.
