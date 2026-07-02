@@ -1,73 +1,156 @@
 # Port Scanning with Nmap
 
-# Port Scanning
-
-This lab demonstrates the fundamentals of port scanning using Nmap.
-There are a total of 65535 ports
-   Well-known ports (0–1023)
-   Registered ports (1024–49151)
-   Dynamic/Ephemeral ports (49152–65535)
-
 ## Objective
 
-The objective of this lab was to learn how to identify open ports on a target system using Nmap. The lab also explored different port scanning techniques and how scan results help identify exposed network services.
-
-## Background
-
-Port scanning is a reconnaissance technique used to discover which ports on a target system are open, closed, or filtered. Open ports indicate that a service is listening and may be accessible over the network.
-Identifying these services helps security professionals understand a system's attack surface.
+Perform TCP port scanning against Windows 10 and Ubuntu Server using Nmap to identify exposed network services and compare how different scan techniques reveal system information.
 
 ## Lab Environment
 
-| Machine | Operating System | Purpose |
-|---------|------------------|---------|
-| Attacker Machine | Kali Linux | Performed Nmap port scanning. |
-| Target Machine 1 | Ubuntu | Used as a Linux target for port scanning. |
-| Target Machine 2 | Windows 10 | Used as a Windows target for port scanning. |
+| Component  | Details             |
+| ---------- | ------------------- |
+| Hypervisor | VMware Workstation  |
+| Attacker   | Kali Linux          |
+| Target 1   | Windows 10          |
+| Target 2   | Ubuntu Server (CLI) |
+| Network    | VMware Host-Only    |
+
 
 ### Tools Used
 
-- Nmap
-- Virtualmachine ( VMware workstation) or Oracle virtualbox depending on what you are using
+Nmap
 
-## Commands Used
+Kali Linux
 
-### 1. Default Port Scan
+VMware Workstation
 
-```bash
-nmap <target-ip>
-```
+### Scan techniques
 
-**Example**
+| Scan Type        | Command                     | Purpose                              |
+| ---------------- | --------------------------- | ------------------------------------ |
+| Default Scan     | `nmap <IP>`                 | Scan the 1,000 most common TCP ports |
+| Specific Ports   | `nmap -p 22,80,443 <IP>`    | Scan selected ports                  |
+| Port Range       | `nmap -p 1-1000 <IP>`       | Scan a defined range                 |
+| Full TCP Scan    | `nmap -p- <IP>`             | Scan all 65,535 TCP ports            |
+| TCP Connect Scan | `nmap -sT <IP>`             | Complete TCP three-way handshake     |
+| SYN Scan         | `sudo nmap -sS <IP>`        | Perform a half-open (stealth) scan   |
+| Save Output      | `nmap -oN results.txt <IP>` | Save scan results to a text file     |
+
+## Results
+
+### Windows 10
+
+### Default Scan
+
+Command
 
 ```bash
 nmap 192.168.56.11
 ```
+### Evidence
 
-**Explanation**
+![Windows Default Port Scan](screenshots/01-default-port-scan-windows.png)
 
-- `nmap` – Launches the Nmap scanner.
-- `<target-ip>` – The IP address of the target machine.
-- By default, Nmap scans the **top 1,000 most common TCP ports** to identify which are open.
+### Observation
 
----
+Host was reachable. 
 
-### 2. Scan Specific Ports
+Several ports appeared filtered, indicating firewall restrictions.
+
+### Specific port scan
+
+command 
+```bash
+nmap -p 22,80,443 192.168.56.11
+```
+nmap
+![Windows Specific Ports](screenshots/02-specific-ports-windows.png)
+
+### Observation
+
+The scan identified ports 22, 80, and 443 as filtered. This indicates that inbound traffic to these ports was being filtered by the host firewall, reducing the system's exposure to network reconnaissance.
+
+port range scan 
+Command
 
 ```bash
-nmap -p 22,80,443 <target-ip>
+nmap -p 1-1000 <target-ip>
 ```
 
-**Explanation**
+### Evidence
 
-- `-p` = **Ports**. Specifies which port(s) to scan.
-- `22` = SSH
-- `80` = HTTP
-- `443` = HTTPS
+![Windows Port Range](screenshots/03-port-range-windows.png)
 
-This command scans only the specified ports instead of the default top 1,000 ports.
+### SYN Scan
 
----
+Command
+
+```bash
+sudo nmap -sS 192.168.56.11
+```
+### Evidence
+
+![Windows SYN Scan](screenshots/05-syn-scan-windows.png)
+
+### Observation
+
+Port 7680/TCP was identified as open.
+SYN scanning revealed additional information compared to the default scan.
+
+## Ubuntu Server
+
+### Default Scan
+
+ Command
+
+```bash
+nmap 192.168.56.13
+```
+
+### Evidence
+
+![Default Port Scan](screenshots/01-default-port-scan.Ubuntu.png)
+
+### Observation
+
+Port 22/TCP (SSH) was open.
+
+Remaining common ports were closed.
+
+### Full Port Scan
+
+Command
+
+```bash
+nmap -p- 192.168.56.13
+```
+### Evidence
+
+![Ubuntu All Ports](screenshots/04-all-ports-scan.Ubuntu.png)
+
+### Observation
+
+The full TCP scan identified additional services including:
+
+
+
+22	SSH
+
+1514	Wazuh Agent Communication
+
+1515	Wazuh Enrollment
+
+5601	Kibana Dashboard
+
+| Feature      | Windows 10                      | Ubuntu Server                  |
+| ------------ | ------------------------------- | ------------------------------ |
+| Default Scan | Multiple filtered ports         | SSH detected                   |
+| Full Scan    | Limited due to firewall         | Additional services discovered |
+| SYN Scan     | Revealed additional information | Confirmed exposed services     |
+
+
+
+
+
 
 ### 3. Scan a Range of Ports
 
@@ -144,7 +227,7 @@ nmap <target-ip>
 
 
 #### Ubuntu
-![Default Port Scan](screenshots/01-default-port-scan.Ubuntu.png)
+
 
 **Findings**
 
@@ -154,7 +237,7 @@ nmap <target-ip>
 
 #### Windows
 
-![Windows Default Port Scan](screenshots/01-default-port-scan-windows.png)
+
 
 **Findings**
 
@@ -175,7 +258,6 @@ nmap -p 22,80,443 <target-ip>
 
 #### Windows
 
-![Windows Specific Ports](02-specific-ports-windows.png)
 
 ---
 ### 3. Port Range Scan
@@ -190,7 +272,7 @@ nmap -p 1-1000 <target-ip>
 
 #### Windows
 
-![Windows Port Range](screenshots/03-port-range-windows.png)
+
 
 ---
 ### 4. All Ports Scan
@@ -201,7 +283,7 @@ nmap -p- <target-ip>
 
 #### Ubuntu
 
-![Ubuntu All Ports](screenshots/04-all-ports-scan.Ubuntu.png)
+
 
 #### Windows
 
@@ -216,11 +298,11 @@ sudo nmap -sS <target-ip>
 
 #### Ubuntu
 
-![Ubuntu SYN Scan](screenshots/05-syn-scan.Ubuntu.png)
+
 
 #### Windows
 
-![Windows SYN Scan](screenshots/05-syn-scan-windows.png)
+
 
 ---
 ## Analysis
