@@ -21,8 +21,20 @@ Use Nmap Scripting Engine (NSE) to gather more information about target systems 
 ### Commands
 
 
-sudo nmap -Pn -sV -sC
+nmap -Pn -sC 192.168.56.11
+
+nmap -Pn ---script banner 192.168.56.11
+
+nmap -Pn -sC 192.168.56.13
+
+nmap -Pn --script banner 192.168.56.13
+
+nmap -Pn --script ssh-hostkey 192.168.56.13
 
 Firewall blocks open ports therefore we intentionally open port 22 for observation
 
-![Default-NSE-script](screenshots/default-NSE-script)
+![Default-NSE-script](screenshots/default-NSE-script.png)
+
+![Ubuntu-banner-retrieval](ubuntu-banner-retrieval.png)
+
+![Ubuntu-ssh-hostkey](ubuntu-ssh-hostkey.png)
