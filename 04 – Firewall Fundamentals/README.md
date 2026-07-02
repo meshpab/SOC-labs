@@ -169,3 +169,8 @@ nmap -Pn -sV 192.168.56.13
 ```
 
 ![Ubuntu Service Version](Ubuntu-Service-Version.png)
+
+## Observation
+
+Before configuring any firewall rules, Kali Linux successfully discovered both target systems. The scans identified open ports and running services on Windows 10 and Ubuntu Server. These baseline results will be used later to compare how firewall configurations affect host visibility and service accessibility.
+
