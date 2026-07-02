@@ -15,7 +15,7 @@ Ubuntu Server - 192.168.56.13
 - [Lab 01 - Network Discovery](01-Network-Discovery/)
 - [Lab 02 - Port Scanning](02-Port-Scanning/)
 - [Lab 03 - Service and OS Detection](03-Service-and-OS-Detection/)
-- [04 – Firewall Fundamentals](04-Firewall-Fundamentals/)
+- [Lab 04 – Firewall Fundamentals](04-Firewall-Fundamentals/)
   
 ## Skills Covered
 
