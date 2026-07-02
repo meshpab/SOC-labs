@@ -48,11 +48,11 @@ Host was reachable.
 
 Open ports identified:
 
-TCP/135 – MSRPC
+TCP/135 – msrpc
 
-TCP/139 – NetBIOS-SSN
+TCP/139 – netbios-ssn
 
-TCP/445 – Microsoft-DS
+TCP/445 – microsoft-ds
 
 Nmap successfully identified Microsoft network services.
 
