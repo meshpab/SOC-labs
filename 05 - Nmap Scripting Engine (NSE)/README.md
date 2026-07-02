@@ -35,6 +35,6 @@ Firewall blocks open ports therefore we intentionally open port 22 for observati
 
 ![Default-NSE-script](screenshots/default-NSE-script.png)
 
-![Ubuntu-banner-retrieval](ubuntu-banner-retrieval.png)
+![Ubuntu-banner-retrieval](screenshots/ubuntu-banner-retrieval.png)
 
-![Ubuntu-ssh-hostkey](ubuntu-ssh-hostkey.png)
+![Ubuntu-ssh-hostkey](screenshots/ubuntu-ssh-hostkey.png)
