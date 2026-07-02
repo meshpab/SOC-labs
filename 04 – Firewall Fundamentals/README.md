@@ -106,7 +106,7 @@ nmap -Pn -sV 192.168.56.13
 
 ![Ubuntu Service Version](screenshots/Ubuntu-Service-Version.png)
 
-## Observation
+### Observation
 
 Service version detection identified the active services running on Ubuntu Server.
 
@@ -116,17 +116,17 @@ Both Windows 10 and Ubuntu Server were successfully discovered from Kali Linux. 
 
 ## Firewall Configuration
 
-Enable Windows Defender Firewall and Ubuntu server UFW and perform scanning
-
-### Windows Defender Firewall
+Enable Windows Defender Firewall and Ubuntu server UFW and perform scan
 
 ### Evidence
+
+ Windows Defender Firewall (Before/After)
+
 
 ![Windows-Firewall-enabled](screenshots/windows-Firewall.png)
 
 
-
-Ubuntu Server UFW
+Ubuntu Server UFW (Before/After)
 
 ![Ubuntu-Firewall-enabled](screenshots/ubuntu-Firewall.png)
 
@@ -135,3 +135,23 @@ Ubuntu Server UFW
 Firewall filtered some ports.
 
 Less information was exposed.
+
+### Comparison
+
+| Feature           | Before     | After            |
+| ----------------- | ---------- | ---------------- |
+| Host Reachability | Reachable  | Reachable        |
+| Open Ports        | Visible    | Reduced/Filtered |
+| Service Detection | Successful | Limited          |
+
+## Key Takeaways
+
+Firewalls reduce the attack surface.
+
+Nmap results change after firewall rules are applied.
+
+Proper firewall configuration improves host security. 
+
+## Conclusion
+
+Enabling Windows Defender Firewall and UFW reduced information available during network reconnaissance, demonstrating the effectiveness of host-based firewalls.
