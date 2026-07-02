@@ -91,5 +91,50 @@ ping 192.168.56.11 (windows machine) 6 packets transmitted, 0 packets received, 
 
 ping 192.168.56.13 (Ubuntu server  machine) 8 packets transmitted, 0 packets received, 100% packet loss
 
+### STEP 3 – Baseline Nmap Scans
+
+### Objective
+
+Perform reconnaissance from Kali Linux against both target machines before making any firewall changes. These results will serve as the baseline for comparison later in the lab.
+
+### 3.1 Scan Windows machine
+
+From Kali Linux, run:
+
+nmap -Pn <Windows-IP>
+
+Example:
+
+```bash
+nmap -Pn 192.168.56.11
+```
+nmap - Starts the network scan.
+
+-Pn - Treats the host as online and skips the ping (host discovery) phase. This is useful because some firewalls block ping requests.
+
+Record the Results
+
+Answer these questions:
+
+Which ports are open?
+
+Which ports are closed?
+
+Is the host reachable?
+
+![Baseline-Windows-Scan](Baseline-Windows-Scan.png) 
+
+### 3.2 Service Version Detection (Windows)
+
+Run:
+
+nmap -Pn -sV <Windows-IP>
+
+Example:
+
+nmap -Pn -sV 192.168.56.11
+
+-sV - Attempts to identify the service and version running on each open port.
+
 
 
