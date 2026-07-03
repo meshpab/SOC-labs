@@ -42,6 +42,13 @@ nmap -Pn 192.168.56.11
 ```
 ![Wireshark-TCP-Analysis](screenshots/Wireshark-TCP.png)
 
+Now you'll see:
+
+TCP SYN packets
+
+TCP SYN/ACK packets (for open ports)
+
+TCP RST packets (for closed ports)
 
 ### Analysis
 
