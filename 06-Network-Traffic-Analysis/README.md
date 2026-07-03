@@ -1,4 +1,4 @@
-# 06 – Network Traffic Analysis
+# 06 – Network Traffic Analysis (ICMP & TCP Analysis)
 
 ## Objective
 
