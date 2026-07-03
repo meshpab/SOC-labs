@@ -132,6 +132,20 @@ Observed how firewall configurations affect scan results.
 
 Verified that a full TCP scan can reveal additional services not found in a default scan.
 
+## Skills Demonstrated
+
+- TCP Port Scanning
+  
+- Open Port Identification
+  
+- Host Enumeration
+  
+- Nmap Port Scanning
+  
+- Network Reconnaissance
+  
+- Basic Attack Surface Identification
+
 ## Conclusion 
 
 This lab provided practical experience with Nmap port scanning techniques in a controlled virtual environment. By comparing Windows 10 and Ubuntu Server, I learned how different operating systems and firewall configurations influence scan results. The knowledge gained from this lab establishes a strong foundation for the next stage of reconnaissance, which focuses on service version and operating system detection.
