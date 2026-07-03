@@ -79,6 +79,8 @@ nmap -Pn --script ssh-hostkey 192.168.56.13
 
 ![Ubuntu-ssh-hostkey](screenshots/ubuntu-ssh-hostkey.png)
 
+### Assessment 
+
 | Assessment                  | Result                        |
 | --------------------------- | ----------------------------- |
 | Host Reachability           | ✅ Reachable                   |
