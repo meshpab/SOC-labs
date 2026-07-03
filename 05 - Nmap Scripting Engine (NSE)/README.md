@@ -27,9 +27,10 @@ nmap -Pn ---script banner
 
 ### Winndows
 
-![Windows-NSE-scripts](Windows-default-NSE.png)
+![Windows-NSE-scripts](screenshots/Windows-default-NSE.png)
 
 ### Observation 
+
 Target successfully reached and responded to the scan.
 
 Identified 3 open TCP ports
@@ -40,7 +41,7 @@ Identified the NetBIOS computer name of the Windows host.
 
 These reconnaissance  provide useful information for identifying Windows systems and exposed services.
 
-![Windows-banner](Windows-banner.png)
+![Windows-banner](screenshots/Windows-banner.png)
 
 ### Observation 
 
