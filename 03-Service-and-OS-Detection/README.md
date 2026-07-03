@@ -145,6 +145,20 @@ Observed the impact of Windows Defender Firewall on reconnaissance results.
 
 Demonstrated how service enumeration supports vulnerability assessment and attack surface analysis.
 
+## Skills Demonstrated
+
+- Service Enumeration
+  
+- Service Version Detection
+  
+- Operating System Detection
+  
+- Network Reconnaissance
+  
+- Attack Surface Analysis
+  
+- Nmap Service Detection
+
 ## Conclusion
 
 This lab demonstrated the use of Nmap to identify running services, software versions, and operating systems on Windows 10 and Ubuntu Server. The results showed how operating system configuration and firewall policies influence reconnaissance outcomes and highlighted the value of service enumeration in understanding a target's attack surface. These findings provide a strong foundation for subsequent labs focused on firewall configuration, traffic analysis, intrusion detection, and security monitoring.
