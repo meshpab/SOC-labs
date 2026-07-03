@@ -16,7 +16,7 @@ Ubuntu Server - 192.168.56.13
 - [Lab 02 - Port Scanning](02-Port-Scanning/)
 - [Lab 03 - Service and OS Detection](03-Service-and-OS-Detection/)
 - [Lab 04 - Firewall Fundamentals](04%20%E2%80%93%20Firewall%20Fundamentals)
-- [Lab 05 - Nmap Scripting Engine](05-Nmap-Scripting-Engine(NSE)/)
+- [Lab 05 - Nmap Scripting Engine](05%20-%20Nmap%20Scripting%20Engine%20(NSE)/README.md))
   
 ## Skills Covered
 
