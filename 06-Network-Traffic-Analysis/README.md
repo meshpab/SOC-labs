@@ -27,6 +27,14 @@ ping 192.168.56.11
 ```
 ![Wireshark-ICMP-Analysis](screenshots/Wireshark-ICMP.png)
 
+### Analysis
+The ICMP traffic confirmed normal network connectivity between the attacker and target machines.
+
+Echo Request and Echo Reply packets indicate successful host communication.
+
+ICMP traffic is commonly used for connectivity testing but may also be used by attackers during network reconnaissance.
+
+
 ### TCP Analysis
 
 ```bash
@@ -34,15 +42,26 @@ nmap -Pn 192.168.56.11
 ```
 ![Wireshark-TCP-Analysis](screenshots/Wireshark-TCP.png)
 
-## Observations
 
-ICMP packets showed successful communication between hosts.
+### Analysis
 
-TCP packets revealed the connection attempts made during the Nmap scan.
+The captured TCP traffic indicates that a port scan was performed against the target.
 
-Packet analysis identified the protocols used during communication.
+Multiple TCP connection attempts are characteristic of reconnaissance activity.
 
-Wireshark provided visibility into individual packets exchanged across the network.
+Monitoring unusual TCP scanning activity can help detect potential attackers during the early stages of an intrusion.
+
+### Key Takeaways
+
+Wireshark captures network traffic in real time. 
+
+ICMP packets verify network connectivity between hosts.
+
+TCP packets reveal how hosts communicate and how port scanning works.
+
+Packet analysis provides visibility into network activity that may indicate legitimate administration or malicious reconnaissance.
+
+Understanding network traffic is a fundamental skill for SOC analysts when investigating security events.
 
 ## Skills Demonstrated
 
@@ -62,6 +81,8 @@ Wireshark provided visibility into individual packets exchanged across the netwo
   
 - Basic SOC Investigation
 
+
+
 ## Conclusion
 
-Wireshark enabled detailed inspection of network traffic generated during communication and scanning activities. Packet analysis provided visibility into protocols, connection behavior, and network events, demonstrating a core skill required for SOC analysts.
+Wireshark successfully captured and analyzed ICMP and TCP network traffic generated during connectivity testing and port scanning. The packet analysis demonstrated how network communication can be monitored and interpreted, providing valuable insight into normal network behavior and reconnaissance activities.
