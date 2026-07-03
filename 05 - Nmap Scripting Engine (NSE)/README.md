@@ -21,22 +21,26 @@ Use Nmap Scripting Engine (NSE) to gather more information about target systems 
 ### Commands
 
 
-nmap -Pn -sC 192.168.56.11
+nmap -Pn -sC 
 
-nmap -Pn ---script banner 192.168.56.11
+nmap -Pn ---script banner
 
 
-nmap -Pn --script banner 192.168.56.13
-
-nmap -Pn --script ssh-hostkey 192.168.56.13
 
 ### Ubuntu Server
 
-Firewall blocks open ports therefore we intentionally open port 22 for observation
-
-### banner grabbing
+Since UFW blocked all incoming services, port 22 (SSH) was temporarily allowed to demonstrate safe NSE enumeration.
+ banner grabbing
+ 
+ ```bash
+nmap -Pn --script banner 192.168.56.13
+```
 
 ![Ubuntu-banner-retrieval](screenshots/ubuntu-banner-retrieval.png)
 
 ### ssh-hostkey retrieval
+
+```bash
+nmap -Pn --script ssh-hostkey 192.168.56.13
+```
 ![Ubuntu-ssh-hostkey](screenshots/ubuntu-ssh-hostkey.png)
