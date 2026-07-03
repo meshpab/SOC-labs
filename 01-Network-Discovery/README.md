@@ -76,10 +76,28 @@ The host discovery scan identified five active devices within the 192.168.56.0/2
 
 ## Key Takeaways
 Successfully identified active hosts within the Host-Only network.
+
 Verified IP addressing on Kali Linux, Windows 10, and Ubuntu Server.
+
 Used Nmap to perform ICMP host discovery.
+
 Recognized VMware networking components as part of the scan results.
+
 Established a network inventory for subsequent security assessments.
+
+## Skills Demonstrated
+
+- Network Discovery
+  
+- Host Discovery
+  
+- ICMP Scanning
+  
+- Nmap Host Discovery
+  
+- Target Identification
+  
+- Network Enumeration
 
 ## Conclusion
 
