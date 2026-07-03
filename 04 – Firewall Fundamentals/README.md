@@ -152,6 +152,22 @@ Nmap results change after firewall rules are applied.
 
 Proper firewall configuration improves host security. 
 
+## Skills Demonstrated
+
+- Windows Defender Firewall Analysis
+  
+- UFW (Uncomplicated Firewall) Administration
+  
+- Firewall Rule Configuration
+  
+- Network Connectivity Testing
+  
+- Firewall Impact Analysis
+  
+- Port Filtering Analysis
+  
+- Security Control Validation
+
 ## Conclusion
 
 Enabling Windows Defender Firewall and UFW reduced information available during network reconnaissance, demonstrating the effectiveness of host-based firewalls.
