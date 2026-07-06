@@ -80,14 +80,145 @@ ssh
 
 Shows only SSH packets.
 
-Filter 2
-
 tcp.port == 22
 
 Shows all TCP traffic using port 22.
 
-Filter 3
-
 ip.addr == 192.168.56.13
 
-Displays traffic to and from the Ubuntu machine.
+Displays traffic to and from the Ubuntu server.
+
+## Wireshark Analysis
+
+The captured traffic represents an active SSH session established between the Kali Linux client (192.168.56.129) and the Ubuntu SSH server (192.168.56.13). The packet capture confirms that the SSH protocol successfully established a secure, encrypted communication channel over TCP port 22.
+
+1. SSH Session Establishment
+
+Observation
+
+The SSH connection was successfully initiated after the TCP three-way handshake. Once the handshake completed, the SSH protocol negotiated cryptographic algorithms and exchanged encryption keys before transmitting any sensitive information.
+
+Security Significance
+
+This ensures that authentication credentials and all subsequent communication are protected against interception.
+
+2. Source and Destination Analysis
+   
+| Field            | Value          |
+| ---------------- | -------------- |
+| Source IP        | 192.168.56.13  |
+| Destination IP   | 192.168.56.129 |
+| Protocol         | SSHv2          |
+| Destination Port | TCP 22         |
+
+
+
+Analysis
+
+The packet originates from the Ubuntu server and is destined for the Kali Linux client. Communication occurs over TCP port 22, the default port used by SSH for secure remote administration.
+
+3. SSH Version
+
+Observation
+
+The capture shows:
+
+SSHv2
+
+Analysis
+
+The communication uses SSH Version 2, which is the industry standard secure version of the Secure Shell protocol. SSHv2 provides strong encryption, integrity verification, and authentication mechanisms to secure remote access.
+
+4. Encrypted Packet Analysis
+
+The selected packet is identified as:
+
+Server: Encrypted packet (len=44)
+
+Analysis
+
+This indicates that the SSH key exchange has already completed successfully and the session has transitioned into encrypted communication.
+
+The payload cannot be inspected because it is protected using symmetric encryption negotiated during the SSH handshake.
+
+5. TCP Analysis
+
+The TCP segment shows:
+
+52784 → 22 [ACK]
+
+Analysis
+
+Source Port: 52784 
+
+Destination Port: 22 (SSH Service)
+
+The ACK flag confirms that the TCP connection is active and data is being acknowledged normally.
+
+No retransmissions, resets, or abnormal TCP behavior were observed during the session.
+
+6. Payload Analysis
+
+Although packet contents are encrypted, Wireshark still provides useful metadata.
+
+Visible information includes:
+
+Source IP
+
+Destination IP
+
+Source Port
+
+Destination Port
+
+Packet Length
+
+Protocol
+
+TCP Flags
+
+Packet Timing
+
+Hidden information includes:
+
+Password
+
+Commands entered
+
+Terminal output
+
+Files transferred
+
+Session contents
+
+This demonstrates the effectiveness of SSH encryption.
+
+Security Findings
+
+✅ SSH communication successfully established over TCP port 22.
+
+✅ TCP session completed normally without retransmissions or connection resets.
+
+✅ SSH Version 2 was used throughout the session.
+
+✅ Application-layer data was encrypted after the SSH handshake.
+
+✅ Sensitive information remained protected from packet inspection.
+
+## Key Takeaways
+
+SSH uses TCP port 22 to provide secure remote administration.
+
+A TCP three-way handshake is completed before SSH communication begins.
+
+SSH negotiates cryptographic algorithms and encryption keys before transmitting sensitive information.
+
+After authentication, all application-layer data becomes encrypted.
+
+Wireshark can identify SSH traffic but cannot decrypt the protected payload.
+
+Security analysts can still investigate SSH sessions using metadata and authentication logs.
+
+Encrypted protocols require defenders to rely on multiple data sources rather than packet contents alone.
+
+
