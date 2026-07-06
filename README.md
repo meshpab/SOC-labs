@@ -20,6 +20,7 @@ Ubuntu Server - 192.168.56.13
 - [Lab 05 - Nmap Scripting Engine](05%20-%20Nmap%20Scripting%20Engine%20(NSE)/README.md)
 - [Lab 06 - Network Traffic Analysis](06-Network-Traffic-Analysis)
 - [Lab 07 - SSH Brute Force Detection & Analysis](SSH-Brute-Force-Detection-%26%20Analysis)
+  
 ## Skills Covered
 
 - Networking
