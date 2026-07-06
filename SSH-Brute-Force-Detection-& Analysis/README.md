@@ -30,6 +30,7 @@ Step 1: Verify Network Connectivity
 ```bash
 ping 192.168.56.13
 ```
+![Network connection](screenshots/ping-ubuntu.png)
 
 Step 2: Verify SSH Service status
 
@@ -40,15 +41,19 @@ Expected Result:
 
 Active (running)
 
+![SSH status](screenshots/SSH-status.png)
+
 Step 3: Start Wireshark
 ```bash
 wireshark
 ```
 
 Step 4: Establish SSH Connection
+
 ```bash
 ssh mkb@192.168.56.13
 ```
+![SSH Connection](SSH-connection.png)
 
 Step 5: Execute Simple Commands
 ```bash
@@ -58,6 +63,8 @@ pwd
 ls
 ```
  (Executing commands over SSH)-Just to make sure you are in and active
+
+ ![Commands execution](simple-Commands.png)
 
 Step 6: Close SSH Session
 
