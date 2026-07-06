@@ -71,6 +71,9 @@ ls
 ```
 exit
 ```
+From the server logs you can identify the ssh session logged with ip addr of the dev used and port
+
+![Server log](screenshots/server.log.png)
 
 ## Wireshark Analysis
 
