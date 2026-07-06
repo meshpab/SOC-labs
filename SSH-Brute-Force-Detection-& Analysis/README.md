@@ -74,30 +74,20 @@ exit
 
 ## Wireshark Analysis
 
-Apply the following filters
+Apply wireshark filters to obtain specific packet.
 
-ssh
-
-Shows only SSH packets.
-
-tcp.port == 22
-
-Shows all TCP traffic using port 22.
-
-ip.addr == 192.168.56.13
-
-Displays traffic to and from the Ubuntu server.
-
-## Wireshark Analysis
-
-
-![TCP Packet Capture](/screenshots/TCP-packet-capture.png)
+![TCP Packet Capture](screenshots/TCP-packet-capture.png)
 
 The captured traffic represents an active SSH session established between the Kali Linux client (192.168.56.129) and the Ubuntu SSH server (192.168.56.13). The packet capture confirms that the SSH protocol successfully established a secure, encrypted communication channel over TCP port 22.
 
 1. SSH Session Establishment
+   
+i) 3 way handshake
 
    ![TCP 3 way handshake](screenshots/TCP-3-wayhandshake.png)
+   
+ii)SSH key exchange
+
    ![SSH Key exchange](screenshots/SSH-key-exchange.png)
 
 Observation
@@ -137,7 +127,7 @@ The communication uses SSH Version 2, which is the industry standard secure vers
 
 4. Encrypted Packet Analysis
 
-   ![Encrypted packets](screenhots/SSH-encrypted-packet.png)
+![Encrypted packets](screenhots/SSH-encrypted-packet.png)
 
 The selected packet is identified as:
 
