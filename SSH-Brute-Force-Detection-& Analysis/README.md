@@ -125,7 +125,7 @@ The communication uses SSH Version 2, which is the industry standard secure vers
 
 4. Encrypted Packet Analysis
 
-![Encrypted packets](screenhots/SSH-encrypted-packet.png)
+![Encrypted Packets](screenshots/SSH-encrypted-packet.png)
 
 Analysis
 
