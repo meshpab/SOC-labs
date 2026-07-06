@@ -115,12 +115,10 @@ The packet originates from the Ubuntu server and is destined for the Kali Linux 
 
 3. SSH Version
 
-Observation
-
 The capture shows:
-
+```
 SSHv2
-
+```
 Analysis
 
 The communication uses SSH Version 2, which is the industry standard secure version of the Secure Shell protocol. SSHv2 provides strong encryption, integrity verification, and authentication mechanisms to secure remote access.
@@ -128,10 +126,6 @@ The communication uses SSH Version 2, which is the industry standard secure vers
 4. Encrypted Packet Analysis
 
 ![Encrypted packets](screenhots/SSH-encrypted-packet.png)
-
-The selected packet is identified as:
-
-Server: Encrypted packet (len=44)
 
 Analysis
 
