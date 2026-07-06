@@ -1,99 +1,80 @@
-# Lab 08 - Detecting Network Reconnaissance Using Nmap and Wireshark
+# Lab 08 – Detecting Network Reconnaissance Using Nmap and Wireshark
 
-## Scenario
-
-A network administrator reports unusual network activity originating from a workstation. You have been tasked with investigating the traffic to determine whether it is consistent with reconnaissance activity.
+This lab simulates a SOC investigation into suspected network reconnaissance on an internal network.
 
 ## Objective
 
-The objective of this lab is to detect and analyze network reconnaissance performed using Nmap by capturing and examining the generated traffic in Wireshark. The lab demonstrates how reconnaissance appears on a network, identifies indicators of scanning activity, and explains how one can recognize and investigate suspicious network behavior.
+The objective of this investigation is to detect, analyze, and document network reconnaissance performed using Nmap. Packet captures collected with Wireshark are analyzed to identify host discovery, port scanning, and service enumeration activities while documenting indicators of compromise (IOCs) and defensive recommendations.
 
-## Tools Used
-
-| Tool      | Purpose                                  |
-| --------- | ---------------------------------------- |
-| Nmap      | Network reconnaissance and port scanning |
-| Wireshark | Network traffic capture and analysis     |
-
-STEP 1 - Perform nmap scan with different sscans -sn, -sS, -sT, -Sv
-
-STEP 2 -Perform wireshark Aanalysis and filter for specific protocol, ip, port e.t.c
-
-## Wireshark Analysis
-
-### Host Discovery
-
-#### Observation
-
-ICMP Echo Request packets were transmitted from Kali to Ubuntu to determine whether the target was online.
-
-#### Analysis
-
-The target responded with ICMP Echo Replies, confirming it was reachable before further reconnaissance began.
-
-### SYN Scan
-
-#### Observation
-
-Numerous TCP SYN packets were transmitted to different destination ports.
-
-#### Analysis
-
-The scanner attempted to identify open TCP ports without completing the TCP three-way handshake, which is characteristic of an Nmap SYN scan.
-
-### TCP Connect Scan
-
-#### Observation
-
-Complete TCP three-way handshakes (SYN → SYN/ACK → ACK) were observed.
-
-#### Analysis
-
-Unlike the SYN scan, the TCP Connect scan established full connections with open ports, making it more likely to appear in server logs.
-
-#### Detection Rules
-
-| Suspicious Behavior                          | Detection Logic              |
-| -------------------------------------------- | ---------------------------- |
-| High number of SYN packets to multiple ports | Possible SYN scan            |
-| ICMP Echo Requests to many hosts             | Possible host discovery      |
-| Connections to many ports in a short time    | Possible reconnaissance      |
-| Service probes after connections             | Possible service enumeration |
+## Lab Environment
 
 
+| Component           | Details                      |
+| ------------------- | ---------------------------- |
+| Attacker            | Kali Linux                   |
+| Target              | Ubuntu Server                |
+| Packet Analyzer     | Wireshark                    |
+| Tool                | Nmap                         |
 
-### Recommendations After results
+## Investigation Workflow
 
-- Monitor for repeated SYN scans.
+i) Reconnaissance Alert
+       
+ii) Capture Network Traffic
+        
+iii) Analyze Packet Capture
+      
+iv) Identify Scan Type
+       
+v) Collect Evidence
+        
+vi) Document Findings
+        
+vii) Recommend Mitigation
 
-- Deploy an IDS/IPS such as Suricata or Snort to detect scanning activity.
+## Tools
 
-- Restrict unnecessary open ports.
+| Tool              | Purpose                                               |
+| ----------------- | ----------------------------------------------------- |
+| Nmap              | Host discovery, port scanning and service enumeration |
+| Wireshark         | Packet capture and protocol analysis                  |
+| Ubuntu SSH Server | Target host     (192.168.56.13)                       |
+| Kali Linux        | Scanning workstation    (192.168.56.129)              |
 
-- Use firewall rules to limit access to sensitive services.
+## Investigation Procedure
 
-- Configure alerts for abnormal port-scanning behavior.
+#### Step 1
 
-- Regularly review firewall and network logs for reconnaissance attempts.
+Verify connectivity between Kali and Ubuntu.
 
-## Skills Demonstrated
+#### Step 2
 
-- Captured and analyzed network traffic using Wireshark.
+Start packet capture using Wireshark.
 
-- Detected network reconnaissance using Nmap.
+#### Step 3
 
-- Identified ICMP and TCP scan patterns.
+Perform Host Discovery
+```bash
+nmap -sn 192.168.56.13
+```
+#### Step 4
 
-- Applied Wireshark display filters to isolate suspicious traffic.
+Perform SYN Scan
 
-- Correlated Nmap scan types with observed network behavior.
+```bash
+sudo nmap -sS 192.168.56.13
+```
+Step 5
 
-- Documented indicators of compromise (IOCs).
+Perform TCP Connect Scan
 
-- Mapped observed activity to the MITRE ATT&CK framework.
+```bash
+nmap -sT 192.168.56.13
+```
+Step 6
 
-- Produced an investigation report with findings and recommendations.
+Perform Service Enumeration
 
-  ## Conclusion
-
-This lab demonstrated how network reconnaissance performed with Nmap can be detected through packet analysis in Wireshark. Host discovery, SYN scanning, TCP Connect scanning, and service version detection each produced identifiable traffic patterns that were successfully analyzed. From a SOC perspective, recognizing reconnaissance activity is essential because it often represents the earliest observable stage of an attack
+```bash
+sudo nmap -sV 192.168.56.13
+```
