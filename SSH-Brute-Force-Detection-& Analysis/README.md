@@ -75,6 +75,10 @@ From the server logs you can identify the ssh session logged with ip addr of the
 
 ![Server log](screenshots/server.log.png)
 
+Instance of multiple login or filter to acccess 'Accepted password' or 'Failed password' in the logs
+
+![SSH multiple logins](screenshots/SSHMultiple-attempts.png)
+
 ## Wireshark Analysis
 
 Apply wireshark filters to obtain specific packet.
