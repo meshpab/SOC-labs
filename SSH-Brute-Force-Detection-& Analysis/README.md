@@ -90,9 +90,15 @@ Displays traffic to and from the Ubuntu server.
 
 ## Wireshark Analysis
 
+
+![TCP Packet Capture](/screenshots/TCP-packet-capture.png)
+
 The captured traffic represents an active SSH session established between the Kali Linux client (192.168.56.129) and the Ubuntu SSH server (192.168.56.13). The packet capture confirms that the SSH protocol successfully established a secure, encrypted communication channel over TCP port 22.
 
 1. SSH Session Establishment
+
+   ![TCP 3 way handshake](screenshots/TCP-3-wayhandshake.png)
+   ![SSH Key exchange](screenshots/SSH-key-exchange.png)
 
 Observation
 
@@ -131,6 +137,8 @@ The communication uses SSH Version 2, which is the industry standard secure vers
 
 4. Encrypted Packet Analysis
 
+   ![Encrypted packets](screenhots/SSH-encrypted-packet.png)
+
 The selected packet is identified as:
 
 Server: Encrypted packet (len=44)
@@ -143,16 +151,6 @@ The payload cannot be inspected because it is protected using symmetric encrypti
 
 5. TCP Analysis
 
-The TCP segment shows:
-
-52784 → 22 [ACK]
-
-Analysis
-
-Source Port: 52784 
-
-Destination Port: 22 (SSH Service)
-
 The ACK flag confirms that the TCP connection is active and data is being acknowledged normally.
 
 No retransmissions, resets, or abnormal TCP behavior were observed during the session.
@@ -163,37 +161,15 @@ Although packet contents are encrypted, Wireshark still provides useful metadata
 
 Visible information includes:
 
-Source IP
-
-Destination IP
-
-Source Port
-
-Destination Port
-
-Packet Length
-
-Protocol
-
-TCP Flags
-
-Packet Timing
+Source IP, Destination IP, Source Port, Destination Port, Packet Length, Protocol, TCP Flags, Packet Timing
 
 Hidden information includes:
 
-Password
-
-Commands entered
-
-Terminal output
-
-Files transferred
-
-Session contents
+Password, Commands entered, Terminal output, Files transferred, Session contents
 
 This demonstrates the effectiveness of SSH encryption.
 
-Security Findings
+### Security Findings
 
 ✅ SSH communication successfully established over TCP port 22.
 
