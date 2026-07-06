@@ -53,7 +53,7 @@ Step 4: Establish SSH Connection
 ```bash
 ssh mkb@192.168.56.13
 ```
-![SSH Connection](SSH-connection.png)
+![SSH Connection](screenshots/SSH-connection.png)
 
 Step 5: Execute Simple Commands
 ```bash
@@ -64,7 +64,7 @@ ls
 ```
  (Executing commands over SSH)-Just to make sure you are in and active
 
- ![Commands execution](simple-Commands.png)
+ ![Commands execution](screenshots/simple-Commands.png)
 
 Step 6: Close SSH Session
 
