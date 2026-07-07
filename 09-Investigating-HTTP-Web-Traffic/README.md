@@ -27,7 +27,7 @@ The objective of this lab is to investigate HTTP traffic using Wireshark by capt
 cd ~/web
 sudo python3 -m http.server 80
 ```
-![HTTP Server](screenshots/HTTP-Web-server)
+![HTTP Server](screenshots/HTTP-Web-server.png)
 
 The server is now listening on TCP port 80 and waiting for incoming HTTP requests.
 
