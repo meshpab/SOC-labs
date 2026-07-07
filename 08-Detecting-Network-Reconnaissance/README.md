@@ -62,7 +62,7 @@ nmap -sn 192.168.56.13
 
 #### Step 4
 
-Perform SYN Scan
+Perform SYN Scan (TCP half-scan)
 
 Observe open port 22
 
@@ -73,7 +73,7 @@ sudo nmap -sS 192.168.56.13
 
 Step 5
 
-Perform TCP Connect Scan
+Perform TCP Connect Scan (TCP Full-scan)
 
 ```bash
 nmap -sT 192.168.56.13
