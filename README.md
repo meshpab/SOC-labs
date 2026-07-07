@@ -21,7 +21,7 @@ Ubuntu Server - 192.168.56.13
 - [Lab 06 - Network Traffic Analysis](06-Network-Traffic-Analysis)
 - [Lab 07 - SSH Brute Force Detection & Analysis](07-SSH-Brute-Force-Dtection-%26-Analysis)
 - [Lab 08 - Detecting Network Reconnaissance](08-Detecting-Network-Reconnaissance)
-  
+- [Lab 09 - investigating]()
 ## Skills Covered
 
 - Networking
