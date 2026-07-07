@@ -79,7 +79,7 @@ sudo nmap -sS 192.168.56.13
 
 This packet sequence (SYN → SYN/ACK → RST) is characteristic of an Nmap SYN (half-open) scan. By terminating the connection with an RST, Nmap identifies open ports without establishing a complete TCP session.
 
-Step 5
+#### Step 5
 
 Perform TCP Connect Scan (TCP Full-scan)
 
@@ -94,7 +94,7 @@ Observe open port 22
 
 The completed handshake (SYN → SYN/ACK → ACK) confirms that this was a TCP Connect scan. Since a full TCP connection was established, the scan is more likely to generate host or application logs than a SYN scan
 
-Step 6
+#### Step 6
 
 Perform Service Enumeration
 
