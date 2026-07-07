@@ -54,16 +54,23 @@ Start packet capture using Wireshark.
 #### Step 3
 
 Perform Host Discovery
+
 ```bash
 nmap -sn 192.168.56.13
 ```
+![ARP H0st Discovery](screenshots/ARP-host-discovery.png)
+
 #### Step 4
 
 Perform SYN Scan
 
+Observe open port 22
+
 ```bash
 sudo nmap -sS 192.168.56.13
 ```
+![TCP Half Scan](screenshots/TCP-Half-scan.png)
+
 Step 5
 
 Perform TCP Connect Scan
@@ -71,10 +78,17 @@ Perform TCP Connect Scan
 ```bash
 nmap -sT 192.168.56.13
 ```
+Observe open port 22
+
+![TCP Full Scan](screenshots/TCP-full-scan.png)
+
 Step 6
 
 Perform Service Enumeration
 
+Observe open port 22
+
 ```bash
 sudo nmap -sV 192.168.56.13
 ```
+![Service Version enumeration](screenshots/Service-enumeration.png)
