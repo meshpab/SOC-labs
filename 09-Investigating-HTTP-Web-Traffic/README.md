@@ -129,6 +129,7 @@ Indicators of Compromise (IOCs)
 | TCP Port 80       | HTTP communication         |
 | GET request       | Resource retrieval         |
 | HTTP 200 OK       | Successful server response |
+| HTTP 304          | Unmodified response        |
 | Plaintext webpage | Unencrypted content        |
 | Client IP         | Request origin             |
 | Server IP         | Destination host           |
