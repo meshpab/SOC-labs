@@ -122,7 +122,8 @@ Selecting Follow  TCP Stream displayed the webpage content:
 ### Analysis
 
 HTTP traffic is transmitted in plaintext. Anyone monitoring the network can view the transmitted content, making HTTP unsuitable for sensitive information.
-Indicators of Compromise (IOCs)
+
+### Indicators of Compromise (IOCs)
 
 | Indicator         | Description                |
 | ----------------- | -------------------------- |
@@ -133,3 +134,41 @@ Indicators of Compromise (IOCs)
 | Plaintext webpage | Unencrypted content        |
 | Client IP         | Request origin             |
 | Server IP         | Destination host           |
+
+
+## Key Takeaways
+
+- HTTP communicates over TCP port 80.
+  
+- TCP must establish a connection before HTTP data is exchanged.
+  
+- HTTP traffic is unencrypted and can be reconstructed by packet analyzers.
+  
+- HTTP headers reveal valuable metadata useful during incident investigations.
+  
+- Wireshark enables analysts to reconstruct complete web sessions using Follow TCP Stream.
+  
+- Monitoring HTTP traffic helps identify suspicious downloads, unauthorized web access, and possible data exfiltration.
+
+
+## Skills Demonstrated
+
+- Configured an HTTP server using Python.
+  
+- Captured HTTP traffic with Wireshark.
+  
+- Analyzed TCP session establishment.
+  
+- Inspected HTTP requests and responses.
+
+- Examined HTTP headers.
+
+- Followed TCP streams to reconstruct web content.
+  
+- Identified plaintext transmission of web data.
+  
+- Documented network evidence in a SOC investigation.
+
+## Conclusion
+
+This investigation demonstrated how web traffic can be captured and analyzed. By examining the TCP handshake, HTTP requests, responses, headers, and transmitted content, it was possible to reconstruct the entire web session. The lab highlights why HTTP poses a security risk for sensitive communications and reinforces the importance of packet analysis in network forensics and incident response.
