@@ -1,20 +1,22 @@
 # Lab 08 – Detecting Network Reconnaissance Using Nmap and Wireshark
 
-This lab simulates a SOC investigation into suspected network reconnaissance on an internal network.
+## Scenario
+
+The SOC received an alert indicating that an internal workstation was communicating with multiple ports on a critical Linux server within a short period. The activity raised concerns that an attacker was performing network reconnaissance to identify accessible services before launching a targeted attack. As a SOC analyst, you have been tasked with investigating the network traffic to determine whether reconnaissance occurred, identify the scan techniques used, and assess the potential security risk.
 
 ## Objective
 
 The objective of this investigation is to detect, analyze, and document network reconnaissance performed using Nmap. Packet captures collected with Wireshark are analyzed to identify host discovery, port scanning, and service enumeration activities while documenting indicators of compromise (IOCs) and defensive recommendations.
 
-## Lab Environment
+## Tool             
 
+Nmap                      
 
-| Component           | Details                      |
-| ------------------- | ---------------------------- |
-| Attacker            | Kali Linux                   |
-| Target              | Ubuntu Server                |
-| Packet Analyzer     | Wireshark                    |
-| Tool                | Nmap                         |
+Wireshark
+
+Ubuntu server
+
+kali linux
 
 ## Investigation Workflow
 
@@ -32,14 +34,7 @@ vi) Document Findings
         
 vii) Recommend Mitigation
 
-## Tools
 
-| Tool              | Purpose                                               |
-| ----------------- | ----------------------------------------------------- |
-| Nmap              | Host discovery, port scanning and service enumeration |
-| Wireshark         | Packet capture and protocol analysis                  |
-| Ubuntu SSH Server | Target host     (192.168.56.13)                       |
-| Kali Linux        | Scanning workstation    (192.168.56.129)              |
 
 ## Investigation Procedure
 
