@@ -1,27 +1,24 @@
 # Port Scanning with Nmap
 
+## Scenario
+The SOC received an alert that a newly deployed server may be exposing unnecessary network services to the internal network. As a SOC analyst, you have been tasked with identifying open TCP ports, determining which services are running, and assessing the server's attack surface to identify potential security risks.
+
+
 ## Objective
 
 Perform TCP port scanning against Windows 10 and Ubuntu Server using Nmap to identify exposed network services and compare how different scan techniques reveal system information.
 
-## Lab Environment
-
-| Component  | Details             |
-| ---------- | ------------------- |
-| Hypervisor | VMware Workstation  |
-| Attacker   | Kali Linux          |
-| Target 1   | Windows 10          |
-| Target 2   | Ubuntu Server (CLI) |
-| Network    | VMware Host-Only    |
 
 
-### Tools Used
+### Tools 
 
 Nmap
 
 Kali Linux
 
-VMware Workstation
+Windows machine
+
+Ubuntu server
 
 ### Scan techniques
 
