@@ -1,19 +1,13 @@
 # Lab 01 - Network Discovery
 
+## Scenario
+
+The SOC receives a request to verify which devices are currently active on a newly deployed internal subnet before security monitoring rules are implemented. As a SOC analyst, you are tasked with identifying all reachable hosts to establish an accurate inventory of network assets.
+
 ## Objective
 
 Perform host discovery on a VMware Host-Only network to identify active devices and verify their IP addresses using Nmap.
 
-## Environment
-
-| Component    | Details             |
-| ------------ | ------------------- |
-| Hypervisor   | VMware Workstation  |
-| Attacker     | Kali Linux          |
-| Target 1     | Windows 10          |
-| Target 2     | Ubuntu Server (CLI) |
-| Network Type | Host-Only           |
-| Subnet       | 192.168.56.0/24     |
 
 ## Commands executed
 
