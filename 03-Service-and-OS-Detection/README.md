@@ -1,18 +1,14 @@
 ## 03: Service & Operating System Detection
 
+### Scenario
+
+During routine security monitoring, the SOC identified a server exposing several open ports. While the ports are known, the security team needs to determine which applications and service versions are running to assess potential vulnerabilities. As a SOC analyst, you have been tasked with performing service detection to identify the running services and document any potential security risks.
+
 ### Objective
 
 Perform service version and operating system detection against Windows 10 and Ubuntu Server using Nmap to identify exposed services, software versions, and operating system fingerprints during the reconnaissance phase of a security assessment.
 
-### Lab Environment
 
-| Component  | Details             |
-| ---------- | ------------------- |
-| Hypervisor | VMware Workstation  |
-| Attacker   | Kali Linux          |
-| Target 1   | Windows 10          |
-| Target 2   | Ubuntu Server (CLI) |
-| Tools      | Nmap                |
 
 ### Network Configuration
 
