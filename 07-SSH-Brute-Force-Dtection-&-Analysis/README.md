@@ -1,16 +1,12 @@
 # Lab 07 - SSH Traffic Detection and Analysis 
 
+## Scenario
+
+The SOC received multiple alerts indicating repeated failed SSH login attempts against a Linux server. There is concern that an attacker is attempting to gain unauthorized access using a brute-force attack. As a SOC analyst, you have been tasked with investigating the network traffic and authentication logs to determine whether the activity is malicious, identify the attack source, and assess whether any login attempts were successful.
+
 ## Objective
 
 Analyze Secure Shell (SSH) traffic using Wireshark, observe the TCP connection establishment, identify the SSH protocol handshake, and understand how encryption protects the confidentiality of remote communications.
-
-## Lab Environment
-
-| Machine    | Operating System | Purpose                     |
-| ---------- | ---------------- | --------------------------- |
-| Kali Linux | Linux            | SSH Client & Packet Capture |
-| Ubuntu     | Linux            | SSH Server                  |
-| Wireshark  | Kali Linux       | Network Traffic Analysis    |
 
 
 ## Tools 
@@ -18,6 +14,10 @@ Analyze Secure Shell (SSH) traffic using Wireshark, observe the TCP connection e
 SSH – Secure remote administration protocol.
 
 Wireshark – Network packet analyzer.
+
+Kali linux - Attacker machine
+
+Ubuntu Server - Victime server
 
 ### Objective of the Attacker's Perspective
 
