@@ -1,33 +1,30 @@
 ## Lab 04 - Firewall Fundamentals
 
+### Scenario
+
+During a routine security review, the SOC identified that a Linux server was accepting unnecessary inbound network connections, increasing its attack surface. As a SOC analyst, you have been tasked with reviewing the firewall configuration, implementing appropriate access control rules, and verifying that only authorized services are accessible.
+
 ### Objective
 
 Evaluate how host-based firewalls affect network reconnaissance by performing baseline scans and comparing scan results before and after firewall configuration.
 
-### Lab Environment
 
-| Machine  | Operating System                     | Role                      |
-| -------- | ------------------------------------ | ------------------------- |
-| Attacker | Kali Linux                           | Reconnaissance & Scanning |
-| Target 1 | Windows 10                           | Windows Target            |
-| Target 2 | Ubuntu Server                        | Linux Server Target       |
-| Tools    | Nmap, Windows Defender Firewall, UFW | Security Tools            |
 
+
+### Tools
+
+Nmap
+
+Windows Defender Firewall
+
+Ubuntu server Firewall (UFW)
 
 ### Network Configuration
 
-Before scanning, determine the IP address of each machine.
-
-Kali Linux:
-
-| Machine       | IP Address    |
-| ------------- | ------------- |
-| Kali Linux    | 192.168.56.15 |
-| Windows 10    | 192.168.56.11 |
-| Ubuntu Server | 192.168.56.13 |
-
+Before scanning, determine the IP address of each machine and note/save it.
 
 ### Connectivity Verification
+
 ```bash
 ping 192.168.56.11
 ping 192.168.56.13
