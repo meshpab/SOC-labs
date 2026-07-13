@@ -199,4 +199,123 @@ The three packets confirm successful connection establishment.
 | SYN, ACK | Server acknowledges the request  |
 | ACK      | Client confirms the connection   |
 
+3-way handshake before servers response
 
+![3 way handshake(SYN,SYN-ACK,ACK](screenshots/3-WAY-HANDSHAKE.png)
+
+### Step 8 – Analyze TCP Header Fields
+
+Expand the TCP section in Wireshark.
+
+Observe:
+
+Source Port, Destination Port, Sequence Number, Acknowledgement Number, Header Length, Window Size, Flags, Checksum
+
+Analysis
+
+These fields explain how TCP establishes reliable communication and manages data transfer.
+
+![TCP Analysis](screenshots/TCP-Analysis.png)
+
+### Step 9 – Analyze TCP Flags
+
+Observe the flags:
+
+
+![TCP FLAG ANALYSIS](screenshots/TCP-flag-analysis)
+
+
+| Flag | Meaning                          |
+| ---- | -------------------------------- |
+| SYN  | Starts a connection              |
+| ACK  | Confirms receipt of data         |
+| PSH  | Delivers data immediately        |
+| FIN  | Gracefully closes a connection   |
+| RST  | Abruptly terminates a connection |
+
+### Step 10 – Follow the TCP Stream
+
+Follow → TCP Stream
+
+#### Observe
+
+HTTP GET request
+
+HTTP response headers
+
+Directory listing /returned content
+
+#### Analysis
+
+Following the TCP stream reconstructs the entire application-layer conversation, allowing analysts to understand what data was exchanged.
+
+![Follow stream header and response](screenshots/Headers-and-response.png)
+
+### Step 11 – Analyze Connection Termination
+
+Locate:
+
+FIN, ACK
+
+
+#### Observe
+
+Which host initiated termination?
+
+Did both hosts close the connection cleanly?
+
+Was a Reset (RST) packet used?
+
+#### Analysis
+
+A normal TCP session ends with a graceful four-way termination. Unexpected resets or incomplete termination may indicate application errors or abnormal behavior.
+
+![Connection termination](screenshots/connection-termination.png)
+
+## Evidence Collected
+
+| Evidence              | Observation                |
+| --------------------- | -------------------------- |
+| Windows Source IP     | 192.168.8.130              |
+| Ubuntu Destination IP | 192.168.8.131              |
+| Source Port           | 49960                      |
+| Destination Port      | 8080                       |
+| Three-Way Handshake   | Successful                 |
+| HTTP Request          | Observed                   |
+| HTTP Response         | Observed                   |
+| TCP Stream            | Successfully reconstructed |
+| FIN/ACK               | Observed                   |
+
+## Key Findings
+
+Windows successfully established a TCP connection with the Ubuntu Server.
+
+A complete TCP three-way handshake (SYN → SYN/ACK → ACK) was observed.
+
+The client issued an HTTP GET request to the Python web server.
+
+The server responded with HTTP/1.0 200 OK, confirming successful resource delivery.
+
+The TCP session ended gracefully through the standard FIN → ACK → FIN → ACK termination process.
+
+No retransmissions, resets, malformed packets, or other anomalous behavior were observed.
+
+Overall, the captured traffic represents a normal, healthy TCP communication session between a client and an internal web server.
+
+## Lessons Learned
+
+TCP requires a three-way handshake before data transmission.
+
+TCP flags indicate different stages of a connection's lifecycle.
+
+Sequence and acknowledgement numbers ensure reliable, ordered communication.
+
+Following a TCP stream allows analysts to reconstruct application-layer conversations.
+
+Retransmission analysis helps identify potential network performance issues.
+
+Understanding normal TCP behavior is essential for detecting anomalies during incident response.
+
+## Conclusion
+
+This investigation successfully captured and analyzed a complete TCP communication session between a Windows 10 workstation and an Ubuntu Server hosting a Python HTTP web server. The analysis confirmed successful connection establishment through the TCP three-way handshake, reliable data transfer using TCP sequence and acknowledgement numbers, and orderly connection termination using FIN and ACK packets. No retransmissions, unexpected connection resets, or other indicators of compromise were identified. The findings establish a baseline of normal TCP communication that can be used for comparison during future security investigations involving network anomalies or suspected malicious activity.
