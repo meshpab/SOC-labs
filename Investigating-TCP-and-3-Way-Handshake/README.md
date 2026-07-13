@@ -286,6 +286,23 @@ A normal TCP session ends with a graceful four-way termination. Unexpected reset
 | TCP Stream            | Successfully reconstructed |
 | FIN/ACK               | Observed                   |
 
+#### Overall traffic analysis
+
+| Item                | Observation                    |
+| ------------------- | ------------------------------ |
+| Client              | Windows 10 (192.168.83.130)    |
+| Server              | Ubuntu Server (192.168.83.131) |
+| Service             | Python HTTP Server             |
+| Destination Port    | 8080                           |
+| Protocol            | HTTP over TCP                  |
+| Handshake           | Successful                     |
+| HTTP Request        | GET /                          |
+| HTTP Response       | 200 OK                         |
+| Session Termination | Graceful (FIN/ACK)             |
+| Retransmissions     | None observed                  |
+| Connection Resets   | None observed                  |
+
+
 ## Key Findings
 
 Windows successfully established a TCP connection with the Ubuntu Server.
