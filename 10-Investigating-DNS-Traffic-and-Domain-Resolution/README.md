@@ -112,4 +112,39 @@ Recently resolved domains appeared within the Windows DNS Resolver Cache.
 The DNS cache stores previously resolved domains locally to improve performance and reduce unnecessary DNS queries. During incident response, cached entries can provide valuable historical evidence of user activity.
 
 
+For every DNS query, Compare the Query and Response
+
+
+Which domain was requested?
+
+Which DNS server received the request?
+
+Did the DNS server respond?
+
+Was the response successful?
+
+What IP address was returned?
+
+How long did the lookup take?
+
+## Key Takeaways
+
+DNS is the first protocol used before HTTP/HTTPS communication.
+
+Transaction IDs associate DNS queries with responses.
+
+Windows stores resolved domains in the DNS Resolver Cache.
+
+Wireshark enables detailed inspection of DNS packet headers and resource records.
+
+Browser activity generates significantly more DNS requests than manual nslookup commands.
+
+DNS cache analysis can provide valuable historical evidence during incident response.
+
+## Conclusion
+
+This investigation demonstrated how DNS traffic can be captured and analyzed using Wireshark to understand the domain resolution process. The workstation successfully resolved external domains through its configured DNS server, and no indicators of compromise or anomalous DNS behavior were identified. Analysis of DNS queries, responses, transaction IDs, resource records, and cached entries provided valuable insight into Windows DNS operations and highlighted the importance of DNS analysis during security investigations.
+
+
+
 
