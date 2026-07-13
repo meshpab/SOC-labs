@@ -23,7 +23,8 @@ Ubuntu Server - 192.168.56.13
 - [Lab 08 - Detecting Network Reconnaissance](08-Detecting-Network-Reconnaissance)
 - [Lab 09 - Investigating HTTP web traffic](09-Investigating-HTTP-Web-Traffic)
 - [Lab 10 - Investigating DNS & Domain resolution](10-Investigating-DNS-Traffic-and-Domain-Resolution)
-  
+- [Lab 11 - Investigating TCP & 3-way handshake](Investigating-TCP-and-3-Way-Handshake)
+
 ## Skills Covered
 
 - Networking
