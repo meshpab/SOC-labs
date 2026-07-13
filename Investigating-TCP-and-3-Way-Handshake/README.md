@@ -68,7 +68,7 @@ Analysis
 
 Successful replies confirm that both hosts can communicate before application traffic is generated.
 
-[!Network Connectivity](screenshots/Network-connectivity.png)
+![Network Connectivity](screenshots/Network-connectivity.png)
 
 ## Step 2 – Identify the Ubuntu Server IP Address
 
@@ -222,7 +222,7 @@ These fields explain how TCP establishes reliable communication and manages data
 Observe the flags:
 
 
-![TCP FLAG ANALYSIS](screenshots/TCP-flag-analysis)
+![TCP FLAG ANALYSIS](screenshots/TCP-flag-analysis.png)
 
 
 | Flag | Meaning                          |
