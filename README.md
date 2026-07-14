@@ -2,14 +2,6 @@
 
 A collection of hands-on SOC Analyst labs documenting practical cybersecurity investigations.
 
-## Static IP for labs
-
-Kali Linux - 192.168.56.15
-           - 192.168.56.129
-
-Windows machine - 192.168.56.11
-
-Ubuntu Server - 192.168.56.13
 
 ## Completed Labs
 
