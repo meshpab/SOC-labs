@@ -18,31 +18,6 @@ A collection of hands-on SOC Analyst labs documenting practical cybersecurity in
 - [Lab 11 - Investigating TCP & 3-way handshake](Investigating-TCP-and-3-Way-Handshake)
 - [Lab 12 - Remote Desktop login attempts against windows](Remote-Desktop-Login-Attempts-Against%20-Windows)
 
-```
-               Internet
-                    │
-                Router
-                    │
-               192.168.56.0/24
-      ┌──────────┼──────────┐
-      │          │          │
-    Kali      Windows     Ubuntu
- (Attacker)   (Victim)   (Server)
-      │          │          │
-      └──────────┼──────────┘
-                 │
-              Snort IDS
-                 │
-          Detects network attacks
-                 │
-          Sends alerts/logs
-                 ▼
-             Wazuh SIEM
-                 │
-       Correlates with host logs
-                 ▼
-        SOC Investigation Dashboard
-```
 ## Skills Covered
 
 - Networking
