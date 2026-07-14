@@ -16,6 +16,7 @@ A collection of hands-on SOC Analyst labs documenting practical cybersecurity in
 - [Lab 09 - Investigating HTTP web traffic](09-Investigating-HTTP-Web-Traffic)
 - [Lab 10 - Investigating DNS & Domain resolution](10-Investigating-DNS-Traffic-and-Domain-Resolution)
 - [Lab 11 - Investigating TCP & 3-way handshake](Investigating-TCP-and-3-Way-Handshake)
+- [Lab 12 - Remote Desktop login attempts against windows](Remote-Desktop-Login-Attempts-Against-Windows)
 
 ## Skills Covered
 
