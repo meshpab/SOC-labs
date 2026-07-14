@@ -20,9 +20,9 @@ Document findings in a SOC-style report.
 
 ## Phase 1 — Prepare the Environment
 
-### Step 1: Verify IP Addresses
+ Verify IP Addresses
 
-Windows
+#### Windows
 
 ```cmd
 ipconfig
@@ -31,12 +31,14 @@ ipconfig
 
 ip addr: 192.168.56.11
 
-kali
+#### kali
 
 ```bash
 ip a
 ```
 ![kali ip address](screenshots/kali-ip.png)
+
+ip addr: 192.168.56.129
 
 ## Environment
 
@@ -74,7 +76,9 @@ xfreerdp /v:192.168.56.11 /u:Kiptoo
 ```
 Enough to generate meaningful log entries without triggering unnecessary account lockouts (if configured).
 
-![Kali linux attacker failed login attempts](screenshots/Attacker-failed-attempts)
+![Kali linux attacker failed login attempts](screenshots/Attacker-failed-attempts.png)
+
+View from the attackers machine (kali linux) failed connection to the windows machine
 
 ## Phase 5 — Successful Login
 
