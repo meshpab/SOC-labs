@@ -117,6 +117,10 @@ The SYN scan confirmed the previously identified open ports while providing a fa
 
 The port scans demonstrated how different Nmap scan techniques reveal varying levels of information about a target system. Ubuntu Server consistently exposed SSH (port 22) and additional services during the full TCP scan, while Windows 10 returned several filtered ports due to Windows Defender Firewall. The full port scan identified services that were not visible during the default scan, highlighting the importance of selecting an appropriate scanning technique during reconnaissance.
 
+## Conclusion 
+
+This lab provided practical experience with Nmap port scanning techniques in a controlled virtual environment. By comparing Windows 10 and Ubuntu Server, I learned how different operating systems and firewall configurations influence scan results. The knowledge gained from this lab establishes a strong foundation for the next stage of reconnaissance, which focuses on service version and operating system detection.
+
 ## Key Takeaways 
 
 Performed multiple TCP port scanning techniques using Nmap.
@@ -143,6 +147,4 @@ Verified that a full TCP scan can reveal additional services not found in a defa
   
 - Basic Attack Surface Identification
 
-## Conclusion 
 
-This lab provided practical experience with Nmap port scanning techniques in a controlled virtual environment. By comparing Windows 10 and Ubuntu Server, I learned how different operating systems and firewall configurations influence scan results. The knowledge gained from this lab establishes a strong foundation for the next stage of reconnaissance, which focuses on service version and operating system detection.
