@@ -79,7 +79,7 @@ Perfom half tcp scan (multiple devices on the network)
 nmap -sS 192.168.56.13
 nmap -sS 192.168.56.11
 ```
-![Traffic generation](screeenshots/traffic-generation.png)
+![Traffic generation](screenshots/traffic-generation.png)
 
 TCP scan
 
@@ -125,17 +125,25 @@ This is normal. It simply means the default rules did not match the traffic thus
 If alerts are generated, identify:
 
 1.Which IP initiated the traffic?
+
 2.Which host received it?
+
 3.Which protocol?
+
 4.Which port?
+
 5.Which Snort rule triggered?
 
 ### Expected Skills
 
 Installing an IDS
+
 Configuring Snort
+
 Monitoring live network traffic
+
 Running reconnaissance attacks
+
 Analyzing IDS alerts
 
   
