@@ -17,6 +17,7 @@ A collection of hands-on SOC Analyst labs documenting practical cybersecurity in
 - [Lab 10 - Investigating DNS & Domain resolution](10-Investigating-DNS-Traffic-and-Domain-Resolution)
 - [Lab 11 - Investigating TCP & 3-way handshake](11-Investigating-TCP-and-3-Way-Handshake)
 - [Lab 12 - Investigating-Remote Desktop login attempts against windows](12-Investigating-Remote-Desktop-Login-Attempts-Against-Windows)
+- [Lab 13 - Snort IDS Alert Analysis](13-Snort-IDS-Alert-Analysis)
 
 ## Skills Covered
 
