@@ -46,7 +46,7 @@ sudo snort -T -c /etc/snort/snort.conf
 The command ensures Snort  load your configuration, check for any syntax errors or missing files, print a success or error message, and then exit
 
 
-![snort configuration](screenshots/snort-configuration.png)
+![snort configuration](screenshots/snort-cofiguration.png)
 
 Configuration loads successfully
 
@@ -79,14 +79,7 @@ Perfom half tcp scan (multiple devices on the network)
 nmap -sS 192.168.56.13
 nmap -sS 192.168.56.11
 ```
-
-## Step 5 — Observe Snort
-
-Watch the Snort terminal.
-
-Possible outcomes:
-
-
+![Traffic generation](screeenshots/traffic-generation.png)
 
 TCP scan
 
@@ -94,6 +87,12 @@ TCP scan
 nmao -sT 192.168.56.13 -p 22
 ```
 ![TCP scan on port 22](screenshots/TCP-scan.png)
+
+## Step 5 — Observe Snort
+
+Watch the Snort terminal.
+
+Possible outcomes:
 
 ### Case 1
 
@@ -115,11 +114,12 @@ This is normal. It simply means the default rules did not match the traffic thus
 
  ## Step 6 — Investigate Alerts
  
- half scan on multiple device (192.168.56.11, 192.168.56.13)
+ Half scan on multiple device (192.168.56.11, 192.168.56.13)
 
  ![Snort logs generated](screenshots/snort-logs.png)
 
  TCP full scan
+ 
  ![TCP full scan](screenshots/TCP-log.png)
 
 If alerts are generated, identify:
@@ -131,7 +131,6 @@ If alerts are generated, identify:
 5.Which Snort rule triggered?
 
 ### Expected Skills
-
 
 Installing an IDS
 Configuring Snort
