@@ -90,6 +90,10 @@ nmap -Pn --script ssh-hostkey 192.168.56.13
 | SSH Host Keys Retrieved     | ✅ Successfully                |
 | Operating System Identified | Ubuntu Linux                  |
 
+## Conclusion
+
+NSE provided additional service information beyond a basic port scan while using safe enumeration techniques. Firewall controls significantly reduced exposed services, and controlled access to SSH enabled successful banner and host-key retrieval for analysis.
+
 ## Key Takeaways
 
 UFW successfully blocked all unnecessary ports.
@@ -101,6 +105,7 @@ Banner grabbing revealed the running SSH software and version.
 The ssh-hostkey NSE script retrieved the server's public cryptographic identity.
 
 Limiting exposed services significantly reduces the system's attack surface while still allowing secure administration.
+
 
 ## Skills Demonstrated
 
@@ -124,5 +129,3 @@ Limiting exposed services significantly reduces the system's attack surface whil
   
 - Network Reconnaissance
 
-## Conclusion
-NSE provided additional service information beyond a basic port scan while using safe enumeration techniques. Firewall controls significantly reduced exposed services, and controlled access to SSH enabled successful banner and host-key retrieval for analysis.
