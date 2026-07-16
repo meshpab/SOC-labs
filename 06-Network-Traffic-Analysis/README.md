@@ -58,6 +58,12 @@ Multiple TCP connection attempts are characteristic of reconnaissance activity.
 
 Monitoring unusual TCP scanning activity can help detect potential attackers during the early stages of an intrusion.
 
+
+
+## Conclusion
+
+Wireshark successfully captured and analyzed ICMP and TCP network traffic generated during connectivity testing and port scanning. The packet analysis demonstrated how network communication can be monitored and interpreted, providing valuable insight into normal network behavior and reconnaissance activities.
+
 ### Key Takeaways
 
 Wireshark captures network traffic in real time. 
@@ -89,7 +95,3 @@ Understanding network traffic is a fundamental skill for SOC analysts when inves
 - Basic SOC Investigation
 
 
-
-## Conclusion
-
-Wireshark successfully captured and analyzed ICMP and TCP network traffic generated during connectivity testing and port scanning. The packet analysis demonstrated how network communication can be monitored and interpreted, providing valuable insight into normal network behavior and reconnaissance activities.
