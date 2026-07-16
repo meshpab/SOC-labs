@@ -127,6 +127,11 @@ What IP address was returned?
 
 How long did the lookup take?
 
+## Conclusion
+
+This investigation demonstrated how DNS traffic can be captured and analyzed using Wireshark to understand the domain resolution process. The workstation successfully resolved external domains through its configured DNS server, and no indicators of compromise or anomalous DNS behavior were identified. Analysis of DNS queries, responses, transaction IDs, resource records, and cached entries provided valuable insight into Windows DNS operations and highlighted the importance of DNS analysis during security investigations.
+
+
 ## Key Takeaways
 
 DNS is the first protocol used before HTTP/HTTPS communication.
@@ -141,9 +146,6 @@ Browser activity generates significantly more DNS requests than manual nslookup 
 
 DNS cache analysis can provide valuable historical evidence during incident response.
 
-## Conclusion
-
-This investigation demonstrated how DNS traffic can be captured and analyzed using Wireshark to understand the domain resolution process. The workstation successfully resolved external domains through its configured DNS server, and no indicators of compromise or anomalous DNS behavior were identified. Analysis of DNS queries, responses, transaction IDs, resource records, and cached entries provided valuable insight into Windows DNS operations and highlighted the importance of DNS analysis during security investigations.
 
 
 
