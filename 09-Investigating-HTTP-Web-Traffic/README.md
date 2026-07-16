@@ -135,6 +135,9 @@ HTTP traffic is transmitted in plaintext. Anyone monitoring the network can view
 | Client IP         | Request origin             |
 | Server IP         | Destination host           |
 
+## Conclusion
+
+This investigation demonstrated how web traffic can be captured and analyzed. By examining the TCP handshake, HTTP requests, responses, headers, and transmitted content, it was possible to reconstruct the entire web session. The lab highlights why HTTP poses a security risk for sensitive communications and reinforces the importance of packet analysis in network forensics and incident response.
 
 ## Key Takeaways
 
@@ -169,6 +172,3 @@ HTTP traffic is transmitted in plaintext. Anyone monitoring the network can view
   
 - Documented network evidence in a SOC investigation.
 
-## Conclusion
-
-This investigation demonstrated how web traffic can be captured and analyzed. By examining the TCP handshake, HTTP requests, responses, headers, and transmitted content, it was possible to reconstruct the entire web session. The lab highlights why HTTP poses a security risk for sensitive communications and reinforces the importance of packet analysis in network forensics and incident response.
