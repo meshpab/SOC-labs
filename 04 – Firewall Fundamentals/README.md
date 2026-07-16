@@ -141,6 +141,12 @@ Less information was exposed.
 | Open Ports        | Visible    | Reduced/Filtered |
 | Service Detection | Successful | Limited          |
 
+
+## Conclusion
+
+Enabling Windows Defender Firewall and UFW reduced information available during network reconnaissance, demonstrating the effectiveness of host-based firewalls.
+
+
 ## Key Takeaways
 
 Firewalls reduce the attack surface.
@@ -164,7 +170,3 @@ Proper firewall configuration improves host security.
 - Port Filtering Analysis
   
 - Security Control Validation
-
-## Conclusion
-
-Enabling Windows Defender Firewall and UFW reduced information available during network reconnaissance, demonstrating the effectiveness of host-based firewalls.
