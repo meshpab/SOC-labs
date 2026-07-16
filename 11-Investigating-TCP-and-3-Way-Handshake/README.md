@@ -302,6 +302,11 @@ A normal TCP session ends with a graceful four-way termination. Unexpected reset
 | Retransmissions     | None observed                  |
 | Connection Resets   | None observed                  |
 
+## Conclusion
+
+This investigation successfully captured and analyzed a complete TCP communication session between a Windows 10 workstation and an Ubuntu Server hosting a Python HTTP web server. The analysis confirmed successful connection establishment through the TCP three-way handshake, reliable data transfer using TCP sequence and acknowledgement numbers, and orderly connection termination using FIN and ACK packets. No retransmissions, unexpected connection resets, or other indicators of compromise were identified. The findings establish a baseline of normal TCP communication that can be used for comparison during future security investigations involving network anomalies or suspected malicious activity.
+
+
 
 ## Key Findings
 
@@ -333,7 +338,4 @@ Retransmission analysis helps identify potential network performance issues.
 
 Understanding normal TCP behavior is essential for detecting anomalies during incident response.
 
-## Conclusion
-
-This investigation successfully captured and analyzed a complete TCP communication session between a Windows 10 workstation and an Ubuntu Server hosting a Python HTTP web server. The analysis confirmed successful connection establishment through the TCP three-way handshake, reliable data transfer using TCP sequence and acknowledgement numbers, and orderly connection termination using FIN and ACK packets. No retransmissions, unexpected connection resets, or other indicators of compromise were identified. The findings establish a baseline of normal TCP communication that can be used for comparison during future security investigations involving network anomalies or suspected malicious activity.
 
