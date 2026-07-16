@@ -61,9 +61,9 @@ sudo snort -i ens37 -A console -q -c /etc/snort/snort.conf
 ```
 -A - Alert mode
 
--q - quite mode
+-q - quiet mode
 
-This command runs Snort as a live Network Intrusion Detection System (NIDS) to actively capture and analyze network traffic accordng to Network interface selected 'ens37' (my network 192.168.56.0/24) 
+This command runs Snort as a live Network Intrusion Detection System (NIDS) to actively capture and analyze network traffic according to Network interface selected 'ens37' (my network 192.168.56.0/24) 
 
 NB-Dont close this terminal 
 
@@ -73,7 +73,7 @@ NB-Dont close this terminal
 
 Open Kali
 
-Perfom half tcp scan (multiple devices on the network)
+Perform TCP SYN Scan (Half-Open Scan) against multiple hosts
 
 ```
 nmap -sS 192.168.56.13
@@ -114,11 +114,11 @@ This is normal. It simply means the default rules did not match the traffic thus
 
  ## Step 6 — Investigate Alerts
  
- Half scan on multiple device (192.168.56.11, 192.168.56.13)
+ TCP SYN (Half-Open) Scan on multiple device (192.168.56.11, 192.168.56.13)
 
  ![Snort logs generated](screenshots/snort-logs.png)
 
- TCP full scan
+ TCP Connect Scan
  
  ![TCP full scan](screenshots/TCP-log.png)
 
@@ -146,4 +146,19 @@ Running reconnaissance attacks
 
 Analyzing IDS alerts
 
-  
+## Conclusion
+
+During this lab, Snort was successfully installed, configured, and deployed as a Network Intrusion Detection System (NIDS) to monitor traffic on the Host-Only network (192.168.56.0/24). Various Nmap reconnaissance techniques, including TCP SYN and TCP Connect scans, were performed from the Kali Linux attacker machine against hosts on the network. Snort successfully inspected the generated traffic and produced alerts based on its detection rules, demonstrating how IDS solutions identify and log potentially suspicious network activity in real time.
+
+## Skills Demonstrated
+
+- Network Intrusion Detection (NIDS)
+- Snort Installation and Configuration
+- IDS Rule-Based Traffic Detection
+- Network Traffic Monitoring
+- Network Reconnaissance Detection
+- TCP/IP Traffic Analysis
+- Nmap Security Assessment
+- Linux System Administration
+- Cybersecurity Log Analysis
+- Security Event Investigation
