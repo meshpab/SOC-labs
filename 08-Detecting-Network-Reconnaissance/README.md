@@ -104,6 +104,11 @@ sudo nmap -sV 192.168.56.13
 
 Unlike a basic port scan, service version detection performs application-level communication to identify services. This provides valuable information, such as the SSH server software and version, which an attacker could use to identify known vulnerabilities or plan further attacks.
 
+Conclusion
+
+This lab demonstrated how Nmap reconnaissance can be detected and investigated using Wireshark. By analyzing host discovery, SYN scans, TCP Connect scans, and service version detection, it was possible to identify the packet patterns associated with each scanning technique. Although Ubuntu host logs showed limited differences between SYN and TCP Connect scans in this lab environment, Wireshark clearly revealed the distinction at the packet level through the TCP handshake behavior. This exercise strengthened practical skills in packet analysis, reconnaissance detection, and documenting security findings from a SOC analyst's perspective.
+
+
 ## Key Takeaways
 
 - Network reconnaissance is often the first stage of a cyber attack and can be detected through packet analysis.
@@ -138,8 +143,5 @@ Unlike a basic port scan, service version detection performs application-level c
   
 - Mapped reconnaissance activity to the MITRE ATT&CK framework (Active Scanning – T1595).
 
-Conclusion
-
-This lab demonstrated how Nmap reconnaissance can be detected and investigated using Wireshark. By analyzing host discovery, SYN scans, TCP Connect scans, and service version detection, it was possible to identify the packet patterns associated with each scanning technique. Although Ubuntu host logs showed limited differences between SYN and TCP Connect scans in this lab environment, Wireshark clearly revealed the distinction at the packet level through the TCP handshake behavior. This exercise strengthened practical skills in packet analysis, reconnaissance detection, and documenting security findings from a SOC analyst's perspective.
 
 
