@@ -105,7 +105,7 @@ From Kali:
 ping 192.168.56.13
 ```
 
-![Generate ICMP packet](screenshots/ICMP-packets.png)
+![Generate ICMP packet](screenshots/ICMP-packet.png)
 
 ## Step 5 – Observe Alerts
 
