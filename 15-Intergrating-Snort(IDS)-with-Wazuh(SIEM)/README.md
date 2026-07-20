@@ -19,5 +19,7 @@ Confirm that both Snort IDS and Wazuh SIEM are installed, running, and functioni
   ![wazuh dashboard running](screenshots/wazuh-dashboard.png)
   
 -  Verify Wazuh Dashboard is accessible from agent device (windows).
+
+- ![Wazuh dashboard active](screenshots/dashboard-active.png)
   
 -  Verify Ubuntu Server can communicate with Kali and Windows.
