@@ -1,24 +1,23 @@
 # Lab 15 – Integrating Snort IDS with Wazuh SIEM
 
-## Overview
+## Part 1 – Verify the Existing Environment
 
-This lab demonstrates how to integrate Snort Intrusion Detection System (IDS) with Wazuh SIEM to centralize network security alerts. By forwarding Snort alerts to Wazuh, security analysts can monitor, investigate, and respond to network-based threats through a single dashboard.
+## Objective
 
-The lab simulates malicious network activity from an attacker machine, detects it with Snort, and forwards the generated alerts to Wazuh for analysis.
+Confirm that both Snort IDS and Wazuh SIEM are installed, running, and functioning independently before integration.
 
-## Objectives
+### Tasks
 
-- Integrate Snort IDS with Wazuh SIEM.
-- Configure Wazuh to collect Snort alert logs.
-- Generate network attacks that trigger Snort signatures.
-- Verify Snort alerts within the Wazuh Dashboard.
-- Investigate network intrusion events using Wazuh.
-- Understand how IDS and SIEM platforms work together in a Security Operations Center (SOC).
+- Verify Snort service is running.
 
- ## Lab Environment
- 
-| Machine       | Role                      | Operating System |
-| ------------- | ------------------------- | ---------------- |
-| Kali Linux    | Attacker                  | Kali Linux       |
-| Ubuntu Server | Snort IDS & Wazuh Manager | Ubuntu Server    |
-| Windows 10    | Target                    | Windows 10       |
+  ![snort running](screenshots/snort-running.png)
+  
+- Verify Wazuh  is running.
+  
+  ![wazuh indexer running](screenshots/wazuh-indexer.png)
+  ![wazuh manager running](screenshots/wazuh-manager.png)
+  ![wazuh dashboard running](screenshots/wazuh-dashboard.png)
+  
+-  Verify Wazuh Dashboard is accessible from agent device (windows).
+  
+-  Verify Ubuntu Server can communicate with Kali and Windows.
