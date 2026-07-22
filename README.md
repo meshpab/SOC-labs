@@ -19,6 +19,7 @@ A collection of hands-on SOC Analyst labs documenting practical cybersecurity in
 - [12 - Investigating-Remote Desktop login attempts against windows](12-Investigating-Remote-Desktop-Login-Attempts-Against-Windows)
 - [13 - Snort IDS Alert Analysis](13-Snort-IDS-Alert-Analysis)
 - [14 - Creating Custom Snort Rules](14-Creating-custom-snort-rules)
+- [15 - Intergrating Snort(IDS) with Wazuh(SIEM)](15-Intergrating-Snort(IDS)-with-Wazuh(SIEM))
 
 ## Skills Covered
 
