@@ -31,7 +31,7 @@ Confirm that both Snort IDS and Wazuh SIEM are installed, running, and functioni
 
 - Verify Snort service is running.
 
-  ![snort running](screenshots/snort-running.png)
+  ![snort running](screenshots/snort-active.png)
   
 - Verify Wazuh  is running.
   
@@ -98,8 +98,10 @@ sudo tail -f /var/log/snort/snort.alert.fast
 
 Monitor the Wazuh alert log.
 ```
-sudo tail -f /var/ossec/logs/alerts/alerts.json
+sudo tail -f /var/ossec/logs/alerts/alerts.fast
 ```
+Snort and Wazuh logs generation against ICMP custom rule generated in the previous lab accessed remotely from powershell
+
 ![wazuh and snort log](screenshots/snort-and-wazuh-logs.png)
 
 ## Step 4 – Validate Alerts in the Wazuh Dashboard
