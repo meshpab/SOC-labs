@@ -1,4 +1,4 @@
-Certified Ethical Hacker(CEH) https://www.credly.com/badges/1933876f-ec99-4d56-bfd3-18cdad7f743f/public_url
+Certified Ethical Hacker(CEH) [https://www.credly.com/badges/1933876f-ec99-4d56-bfd3-18cdad7f743f/public_url](https://www.credly.com/badges/b05862cd-4879-47bd-a99a-9b21ef228cb1)
 # SOC Labs
 
 A collection of hands-on SOC Analyst labs documenting practical cybersecurity investigations.
