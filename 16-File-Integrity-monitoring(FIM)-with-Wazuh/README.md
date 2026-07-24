@@ -96,7 +96,7 @@ identify these events:
 ✅ Another Rule ID 554 — File added (abc.txt)
 
 you can also see:
-
+```
 Agent: DESKTOP-J4AF3L5
 
 Path: C:\fim-lab\new text document.txt
@@ -106,7 +106,7 @@ Mode: realtime
 Decoder: syscheck_new_entry
 
 Groups: syscheck
-
+```
 This means:
 
 ✅ Wazuh Agent is monitoring the folder.
@@ -169,7 +169,9 @@ For the File modified event:
 we can see rule-id 
 
 -550- Modified file content
+
 -553- delete file
+
 -554- Add file
 
 ## Conclusion
