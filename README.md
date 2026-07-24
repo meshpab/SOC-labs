@@ -20,12 +20,13 @@ A collection of hands-on SOC Analyst labs documenting practical cybersecurity in
 - [13 - Snort IDS Alert Analysis](13-Snort-IDS-Alert-Analysis)
 - [14 - Creating Custom Snort Rules](14-Creating-custom-snort-rules)
 - [15 - Intergrating Snort(IDS) with Wazuh(SIEM)](15-Intergrating-Snort(IDS)-with-Wazuh(SIEM))
+- [16 - File Integrity monitoring(FIM) with Wazuh](16-File-Integrity-monitoring(FIM)-with-Wazuh)
 
 ## Skills Covered
 
-- Networking
-- Nmap
-- Wireshark
-- Firewalls
-- IDS/IPS
-- SIEM
+- Networking, protocols
+- Nmap, Wireshark, burp-suite, nessus, nikto, metasploit,python e.t.c) 
+- Firewalls(UFW,microsoft defender firewall)
+- IDS/IPS(snort,suricata)
+- SIEM(wazuh, splunk)
+- lab( Vmware workstation, Kali-linux, Ubuntu server, Windows 10 & 11)
