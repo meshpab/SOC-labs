@@ -22,7 +22,7 @@ A collection of hands-on SOC Analyst labs documenting practical cybersecurity in
 - [14 - Creating Custom Snort Rules](14-Creating-custom-snort-rules)
 - [15 - Intergrating Snort(IDS) with Wazuh(SIEM)](15-Intergrating-Snort(IDS)-with-Wazuh(SIEM))
 - [16 - File Integrity monitoring(FIM) with Wazuh](16-File-Integrity-monitoring(FIM)-with-Wazuh)
-- [17 - Windows Event Log Analysis with Wazuh(SIEM)](17-Windows-Event-Log-Analysis-with-Wazuh(SIEM))
+- [17 - Windows Event Log Analysis with Wazuh(SIEM)](17-Windows-Event%20Log-Analysis-with-Wazuh(SIEM))
 
 
 ## Skills Covered
