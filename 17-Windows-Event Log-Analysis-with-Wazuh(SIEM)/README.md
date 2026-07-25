@@ -70,7 +70,7 @@ Open the Wazuh Dashboard and search for the events:
 
 Examine the Event Details
 
-Follow and expand the event to check event details and draw conclusion
+Follow and expand the event to check event details and draw conclusion same procedure for successfull events
 
 ![Event details](screenshots/Failed-event-examination.png)
 
