@@ -4,6 +4,8 @@
 
 The goal of this lab is to monitor and analyze Windows Security Event Logs using Wazuh SIEM. The lab demonstrates how Windows events are collected by the Wazuh agent, forwarded to the Wazuh manager, and analyzed through the Wazuh Dashboard. It focuses on investigating authentication events, user account activity, and security-related logs commonly used during SOC investigations.
 
+We will generate failed nd successfull login attempts to confirm our wazuh agent receives and sents the event to wazuh anager hence displayed in the dashboard where all other events are being displayed
+
 ## Lab Environment
 
 | Component     | Role                 | IP Address    |
