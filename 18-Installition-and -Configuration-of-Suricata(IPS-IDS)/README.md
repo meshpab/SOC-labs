@@ -25,7 +25,7 @@ Successfully deploy Suricata Intrusion Detection System (IDS) on an Ubuntu Serve
 | ------------ | ----------------------- |
 | Host Machine | Windows 11 Pro          |
 | Attacker VM  | Kali Linux              |
-| IDS Server   | Ubuntu Server 24.04 LTS |
+| IDS Server   | Ubuntu Server           |
 | Target VM    | Windows 10              |
 
 
