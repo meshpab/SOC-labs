@@ -195,7 +195,7 @@ Inbound data Packet sent to our network
 
 Suricata alert detection logs
 
-![Suricata alert logs](screenshot/suricata-alert-logs.png)
+![Suricata alert logs](screenshots/suricata-alert-logs.png)
 
 or to view JSON event log
 ```
@@ -209,9 +209,10 @@ This contains events such as:
 - TLS
 - SSH
 - Flow records
-  This are almost same as SIEM logs we will see them later when we configure suricata alert logs to SIEM
+
+  ![JSON event logs](screenshots/JSON-logs.png)
   
-  ![JSON event logs](screenshots/JSON-logs)
+    This are almost same as SIEM logs we will see them later when we configure suricata alert logs to SIEM
   
 ## Conclusion
 
