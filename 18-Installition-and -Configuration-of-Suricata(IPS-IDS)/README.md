@@ -21,9 +21,12 @@ Successfully deploy Suricata Intrusion Detection System (IDS) on an Ubuntu Serve
 
 ## Lab Environment
 
-Windows 10 -Wazuh agent
-
-Ubuntu server- SIEM centralized server
+| Component    | Operating System        |
+| ------------ | ----------------------- |
+| Host Machine | Windows 11 Pro          |
+| Attacker VM  | Kali Linux              |
+| IDS Server   | Ubuntu Server 24.04 LTS |
+| Target VM    | Windows 10              |
 
 
 ## Snort disabling
