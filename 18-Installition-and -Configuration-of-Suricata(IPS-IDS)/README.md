@@ -121,13 +121,48 @@ Issue 1
 ![Issue 1](screenshots/no-rule-issue.png)
 
 We'll have to download it
+```
+sudo update-suricata
+```
+![Suricata rules](screenshots/suricata-rules-download.png)
+
+Test it again
+```
+sudo suricata -T -c /etc/suricata/suricata.yaml
+```
+You should see
+```
+Configuration provided was successfully loaded.
+```
+![suricata rules configuration](screenshots/suricata-rules-configuration.png)
 
 Issue 2
 
 ![Issue 2](screenshots/network-interface-issue.png)
 
-We'll have to change it
+We'll have to change it from default eth to ens monitoring 
 
-My interfaces are ens33 and ens 37
+My interfaces are ens33 and ens37
 
 ![Network Interfaces](screenshots/Network-interface.png)
+
+Let's fix to my lab
+```bash
+sudo nano /etc/suricata/suricata.yaml
+```
+Let us open and edit the configuration file to monitor my interface
+
+Let's look for interface: eth0 replace to interface: ens37 (depends with your network interface)
+
+![Edit Interface](screenshots/Edit-interface.png) 
+
+Edit and save the interface name 
+
+Restart Suricata and check status
+
+```bash
+sudo systemctl restart suricata
+sudo systemctl status suricata
+```
+Evidence
+![Suricata up and active](screenshots/suricata-active.png)
