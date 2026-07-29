@@ -6,6 +6,12 @@ The objective of this lab is to install latest version of Suricata(IDS/IPS) and 
 
 Since we were previously using snort lets first stop and disable snort and shift to suricata
 
+## Lab Environment
+
+Windows 10 -Wazuh agent
+Ubuntu server- SIEM centralized server
+Kali-Linux- Attacker/ Packet generator
+
 ## Snort disabling
 
 ### Step 1. Check snort status
@@ -64,3 +70,62 @@ And confirm it's running
 ![Restart SIEM](screenshots/restart-SIEM.png)
 
 We've succesfully removed SNORT from our SIEM configuration but not uninstalled it lets install and configure SURICATA
+
+## Suricata installation and configuration
+
+### step 1. Install Suricata
+
+On bash run:
+
+```
+sudo apt update
+sudo apt install suricata -y
+```
+### Step 2. Verify installation
+
+```
+suricata --version
+```
+Confirms it's installed
+
+Step 3. Enable on boot and Start Suricata
+
+```
+sudo systemctl enable suricata
+sudo systemctl start suricata
+```
+Step 3. Verify its status
+
+```
+sudo systemctl status suricata
+```
+Evidence
+
+[Suricata installation](screenshots/suricata-installation.png)
+
+Status failed lets try to identify and troubleshoot the problem using both ubuntu terminal and powershell ssh
+
+Run
+```
+sudo suricata -T -c /etc/suricata/suricata.yaml -v
+sudo journalctl -u suricata -n 20 --no-pager
+grep "interface:" /etc/suricata/suricata.yaml
+ip a
+```
+Issues identified
+
+Issue 1
+
+![Issue 1](screenshots/no-rule-issue.png)
+
+We'll have to download it
+
+Issue 2
+
+![Issue 2](screenshots/network-interface-issue.png)
+
+We'll have to change it
+
+My interfaces are ens33 and ens 37
+
+![Network Interfaces](screenshot/Network-interface.png)
