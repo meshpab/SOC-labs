@@ -43,7 +43,7 @@ sudo nano /var/ossec/etc/ossec.conf
 ```
 Find the section you previously added <localfile> , where the snort log path is '/var/log/snort/snort.alert.fast' and delete it
 
-![Delete snort configuration path](screenshots/delete-snort-path.png)
+![Delete snort configuration path](screenshots/detete-snort-path.png)
 
 Delete and save the XML file, then confirm if the XML is valid 
 
