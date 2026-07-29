@@ -214,8 +214,8 @@ This contains events such as:
 - Flow records
 
   ![JSON event logs](screenshots/JSON-logs.png)
-  
-    This are almost same as SIEM logs we will see them later when we configure suricata alert logs to SIEM
+
+  Since json file has alot of details this is the file that we will later sent it and configure it with the SIEM
   
 ## Conclusion
 
