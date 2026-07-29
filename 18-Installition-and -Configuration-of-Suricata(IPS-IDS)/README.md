@@ -213,7 +213,7 @@ This contains events such as:
 - SSH
 - Flow records
 
-  ![JSON event logs](screenshots/JSON-logs.png)
+  ![JSON event logs](screenshots/JSON-suricata-logs.png)
 
   Since json file has alot of details this is the file that we will later sent it and configure it with the SIEM
   
