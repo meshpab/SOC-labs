@@ -62,3 +62,5 @@ sudo systemctl restart wazuh-manager
 And confirm it's running
 
 ![Restart SIEM](screenshots/restart-SIEM.png)
+
+We've succesfully removed SNORT from our SIEM configuration but not uninstalled it lets install and configure SURICATA
