@@ -103,7 +103,7 @@ sudo systemctl status suricata
 ```
 Evidence
 
-[Suricata installation](screenshots/suricata-installation.png)
+![Suricata installation](screenshots/suricata-installation.png)
 
 Status failed lets try to identify and troubleshoot the problem using both ubuntu terminal and powershell ssh
 
@@ -130,4 +130,4 @@ We'll have to change it
 
 My interfaces are ens33 and ens 37
 
-![Network Interfaces](screenshot/Network-interface.png)
+![Network Interfaces](screenshots/Network-interface.png)
