@@ -118,7 +118,7 @@ Issues identified
 
 Issue 1
 
-![Issue 1](screenshots/no-rule-issue.png)
+![No rule Issue](screenshots/no-rule-issue.png)
 
 We'll have to download it
 ```
