@@ -12,7 +12,7 @@ Windows 10 -Wazuh agent
 
 Ubuntu server- SIEM centralized server
 
-Kali-Linux- Attacker/ Packet generator
+# THIS LAB CONTAINS SNORT(IDS/IPS) DISABLING, SURICATA(IDS/IPS), INSTALLATION, CONFIGURATION AND TROUBLESHOOTING
 
 ## Snort disabling
 
