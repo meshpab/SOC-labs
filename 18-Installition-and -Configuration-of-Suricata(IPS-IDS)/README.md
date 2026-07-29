@@ -9,7 +9,9 @@ Since we were previously using snort lets first stop and disable snort and shift
 ## Lab Environment
 
 Windows 10 -Wazuh agent
+
 Ubuntu server- SIEM centralized server
+
 Kali-Linux- Attacker/ Packet generator
 
 ## Snort disabling
