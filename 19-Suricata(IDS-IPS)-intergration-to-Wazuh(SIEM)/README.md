@@ -169,6 +169,9 @@ decoder.name: json
 ```
 ![Wazuh logs from suricata decoder](screenshots/suricata-decoder-events.png)
 
+Random event sample from Suricata decoders inside wazuh SIEM
+
+![Event sample](screenshots/event-sample.png)
 
 Our Wazuh( SIEM) successfully monitors and decodes suricata logs
 
