@@ -161,12 +161,14 @@ If the service starts successfully, Wazuh is now ready to ingest Suricata events
 
 Confirm that Wazuh has successfully loaded the Suricata logs decoded by suricata decoders.
 
-Monitor the Wazuh Log
+Lets Monitor the is suricata decoders logs in events that correlates with wazuh rules at the dashboard
 
-Run:
+filter:
 ```
-/var/ossec/logs/alerts.json
+decoder.name: json
 ```
+![Wazuh logs from suricata decoder](screenshots/suricata-decoder-events.png)
+
 
 Our Wazuh( SIEM) successfully monitors and decodes suricata logs
 
