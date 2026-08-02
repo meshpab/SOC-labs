@@ -81,7 +81,7 @@ Expected output:
 ```
 Active: active (running)
 ```
-![Restart suricata](screeshots/restart-suricata.png)
+![Restart and verify Suricata](screenshots/restart-suricata.png)
 
 ## Step 5: Verify EVE JSON Log Generation
 
@@ -91,7 +91,8 @@ sudo tail -f var/log/suricata/eve.json
 ```
 Output:
 
-![EVE.JSON logs](screenshots/eve.json-logs.png)
+![Suricata Eve.json logs](screenshots/eve.json-logs.png)
+
 
 Our Suricata successfully logs in every event generated. The eve.json file is Suricata's primary structured event log. It contains detailed information about network activity, including alerts, DNS queries, HTTP requests, TLS sessions, and network flows. Wazuh will monitor this file to detect and analyze security events.
 
@@ -166,7 +167,6 @@ Run:
 ```
 /var/ossec/logs/alerts.json
 ```
-![Suricata decoded logs](screenshots/wazuh-suricata-logs.png)
 
 Our Wazuh( SIEM) successfully monitors and decodes suricata logs
 
