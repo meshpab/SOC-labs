@@ -158,11 +158,48 @@ If the service starts successfully, Wazuh is now ready to ingest Suricata events
 
 ## Step 8: Verify that Wazuh Is Monitoring eve.json
 
-Confirm that Wazuh has successfully loaded the Suricata log file.
+Confirm that Wazuh has successfully loaded the Suricata logs decoded by suricata decoders.
 
 Monitor the Wazuh Log
 
 Run:
 ```
-sudo tail -f /var/ossec/logs/ossec.log
+/var/ossec/logs/alerts.json
 ```
+![Suricata decoded logs](screenshots/wazuh-suricata-logs.png)
+
+Our Wazuh( SIEM) successfully monitors and decodes suricata logs
+
+## Conclusion
+
+This lab successfully demonstrated the integration of Suricata IDS with the Wazuh SIEM platform to provide centralized network security monitoring and threat detection. Suricata captured and analyzed network traffic in real time, generating flow, protocol, and IDS alert events in eve.json. Wazuh continuously monitored these events, decoded them using its Suricata decoder, applied correlation rules, and displayed actionable security alerts within the Wazuh Dashboard. Through this integration, I gained practical experience in understanding the complete detection pipeline, from packet inspection to SIEM-based alerting and investigation, while differentiating between normal network activity and events that trigger IDS signatures.
+
+## Key Takeaways
+
+- Successfully integrated Suricata IDS with the Wazuh SIEM platform.
+- Configured Wazuh to continuously monitor Suricata's eve.json output.
+- Understood the difference between flow, protocol, and alert events in Suricata.
+- Learned how Suricata inspects network traffic using ET Open and custom IDS rules.
+- Understood that only traffic matching Suricata detection rules generates IDS alerts.
+- Learned that Wazuh uses a Suricata decoder to parse eve.json events before applying its own rules.
+- Differentiated between informational network events and actionable security alerts.
+- Investigated network metadata including source/destination IP addresses, ports, protocols, packet counts, and connection states.
+- Validated the complete detection workflow from network traffic capture to SIEM alert generation.
+- Strengthened understanding of the roles of IDS and SIEM within a Security Operations Center (SOC).
+
+## Skills Demonstrated
+
+- Suricata IDS Configuration and intergration to Wazuh SIEM
+- ET Open Rule Management
+- Intrusion Detection
+- Network Traffic Analysis
+- Deep Packet Inspection (DPI)
+- Security Event Monitoring
+- SIEM Alert Analysis
+- Security Event Correlation
+- IDS Signature Validation
+- Threat Detection & Analysis
+- Log Collection & Parsing
+- SOC Investigation
+- Incident Analysis
+- Network Security Monitoring
