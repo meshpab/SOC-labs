@@ -94,7 +94,7 @@ The `-T` option runs Suricata in configuration test mode and verifies that the c
 
 Output:
 
-![Test the configuration file](screenshots/test-cconf-file.png)
+![Test the configuration file](screenshots/test-conf-file.png)
 
 The successful output confirms that the Suricata configuration file and custom rule were loaded successfully without errors.
 
