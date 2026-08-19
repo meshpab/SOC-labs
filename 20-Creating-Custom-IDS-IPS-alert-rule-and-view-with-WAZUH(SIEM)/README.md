@@ -8,19 +8,19 @@ The resulting alert will be observed in both **Suricata** and **Wazuh SIEM**, de
 
 ## Lab Components
 
-* **Windows 10 – Victim Machine**
-* **Kali Linux – Attacker Machine**
-* **Ubuntu Server – Hosts Suricata & Wazuh**
+* Windows 10 – Victim Machine
+* Kali Linux – Attacker Machine
+* Ubuntu Server – Hosts Suricata & Wazuh
 
 ## Tools Used
 
-* **Suricata**
-* **Wazuh**
-* **Nano**
-* **Nmap**
-* **PowerShell**
-* **Bash**
-* **Ping/ICMP**
+* Suricata
+* Wazuh
+* Nano
+* Nmap
+* PowerShell
+* Bash
+* Ping/ICMP
 
 ---
 
@@ -38,7 +38,7 @@ sudo systemctl status suricata
 
 Observed output:
 
-![Suricata verification}9screenshots/suricata-status.png)
+![Suricata verification](screenshots/suricata-status.png)
 
 ---
 
@@ -94,7 +94,7 @@ The `-T` option runs Suricata in configuration test mode and verifies that the c
 
 Output:
 
-![Test the configuration file](screenshots/test-cconf-file.png)
+![Test the configuration file](screenshots/test-conf-file.png)
 
 The successful output confirms that the Suricata configuration file and custom rule were loaded successfully without errors.
 
