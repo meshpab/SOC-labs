@@ -24,12 +24,14 @@ A collection of hands-on SOC Analyst labs documenting practical cybersecurity in
 - [16 - File Integrity monitoring(FIM) with Wazuh](16-File-Integrity-monitoring(FIM)-with-Wazuh)
 - [17 - Windows Event Log Analysis with Wazuh(SIEM)](17-Windows-Event%20Log-Analysis-with-Wazuh(SIEM))
 - [18 - Installation and Configuration of Suricata(IDS/IPS)](18-Installition-and%20-Configuration-of-Suricata(IPS-IDS))
+- [19 - Intergrating Suricata(IDS/IPS) to Wazuh(SIEM)](19-Suricata(IDS-IPS)-intergration-to-Wazuh(SIEM))
+- [20 - Custom alert rule creation in Suricata and view in WAZUH alerts](20-Creating-Custom-IDS-IPS-alert-rule-and-view-with-WAZUH(SIEM))
 
 
 ## Skills Covered
 
 - Networking, protocols
-- Nmap, Wireshark, burp-suite, nessus, nikto, metasploit,python e.t.c) 
+- Nmap, Wireshark, burp-suite, nessus, nikto, metasploit, python, hydra e.t.c) 
 - Firewalls(UFW,microsoft defender firewall)
 - IDS/IPS(snort,suricata)
 - SIEM(wazuh, splunk)
